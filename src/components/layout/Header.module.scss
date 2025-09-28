@@ -1,0 +1,92 @@
+@import '../../styles/_variable.scss';
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 7rem;
+
+  .inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+}
+
+.logo {
+  position: relative;
+  padding-right: 3rem;
+  font : {
+    size: 2.6rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    background-color: map.get($colors, "primary");
+    border-radius: 100%;
+  }
+}
+
+.mobileMenu {
+  margin-left: auto;
+
+  svg {
+    width: 2.6rem;
+    height: 2.6rem;
+    fill: map.get($colors, "white");
+  }
+}
+
+
+/** Media Query */
+@media (max-width: 500px) {
+  .header {
+    .inner {
+      padding: 0 1.25rem;
+    }
+  }
+
+  .logo {
+    padding-right: 2rem;
+    font-size: 2rem;
+
+    &::after {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .mobileMenu {
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: map.get($colors, "white");
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    .inner {
+      max-width: 144rem;
+    }
+  }
+
+  .logo {
+    font : {
+      size: 3.6rem;
+    }
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+}
