@@ -45,6 +45,23 @@
   }
 }
 
+.mobile__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  height: 7rem;
+  padding: 0 2rem;
+
+  .mobileMenuClose {
+    svg {
+      width: 2.6rem;
+      height: 2.6rem;
+      fill: map.get($colors, "white");
+    }
+  }
+}
+
 
 /** Media Query */
 @media (max-width: 500px) {
@@ -69,6 +86,15 @@
       width: 2.4rem;
       height: 2.4rem;
       fill: map.get($colors, "white");
+    }
+  }
+
+  .mobile__header {
+    padding: 0 1rem;
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
     }
   }
 }
