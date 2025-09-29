@@ -21,6 +21,13 @@ const Header = () => {
         <h1 className={ HeaderStyle.logo }>
           <Link to="/">LEE JEONG JAE</Link>
         </h1>
+        <nav className={ HeaderStyle.pcNav }>
+          <ul>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </nav>
         <button 
           type='button' 
           className={ HeaderStyle.mobileMenu }
@@ -40,6 +47,13 @@ const Header = () => {
               <RiCloseLine />
             </button>
           </div>
+          <nav className={ HeaderStyle.mobileNav }>
+            <ul>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/projects">Projects</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+            </ul>
+          </nav>
         </MobileNav>
       </div>
     </header>
@@ -54,7 +68,7 @@ const MobileNav = styled.div<{ $isMenuOpen: boolean }>`
   position: fixed;
   top: 0;
   right: -100%;
-  width: 32rem;
+  width: 27rem;
   height: 100vh;
   background-color: #373737;
   z-index: 100;
@@ -64,7 +78,7 @@ const MobileNav = styled.div<{ $isMenuOpen: boolean }>`
     right: 0;
   `}
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     display: none;
   }
 `;
