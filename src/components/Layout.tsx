@@ -1,5 +1,6 @@
-import Header from './layout/Header'
+import Header from './layout/header/Header'
 import { Outlet } from 'react-router-dom'
+import FixedUtil from './layout/fixed/FixedUtil'
 
 const Layout = () => {
   return (
@@ -8,6 +9,7 @@ const Layout = () => {
       <main id='main'>
         <Outlet />
       </main>
+      <FixedUtil /> 
     </>
   )
 }
