@@ -1,3 +1,5 @@
+@use '../../styles/variable' as *;
+
 .intro {
   position: relative;
   height: calc(100vh - 7rem);
@@ -14,6 +16,30 @@
     .intro__summary {
       font-size: 2rem;
     }
+
+    .self {
+      margin: 4rem 0;
+      font: {
+        size: 6rem;
+        weight: 700;
+      }
+      letter-spacing: -6px;
+      word-break: keep-all;
+      line-height: 1.4;
+
+      strong {
+        display: block;
+        color: map.get($colors, "primary");
+      }
+    }
+
+    .description {
+      font: {
+        size: 1.6rem;
+        weight: 400;
+      }
+      color: rgba(255, 255, 255, 0.8);
+    }
   }
 }
 
@@ -27,6 +53,28 @@
     .intro__info {
       .intro__summary {
         font-size: 1.8rem;
+      }
+
+      .self {
+        font-size: 4rem;
+        letter-spacing: -.5px;
+      }
+
+      .description {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 992px) {
+  .intro {
+    padding: 9rem 0 0;
+    
+    .intro__info {
+      .self {
+        margin: 6rem 0; 
+        font-size: 8rem;
       }
     }
   }

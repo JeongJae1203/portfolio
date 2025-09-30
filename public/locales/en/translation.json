@@ -1,4 +1,6 @@
 {
-  "greeting": "Hello, I'm JeongJae Lee.",
-  "Introduce": "Introduce"
+  "hello": "Hello, I'm ",
+  "name": "JeongJae Lee.",
+  "helloEnd": ".",
+  "summary": "Thank you for visiting my web portfolio."
 }

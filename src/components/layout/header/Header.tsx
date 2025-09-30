@@ -6,7 +6,12 @@ import { useState } from 'react'
 import koFlag from '../../../assets/images/national/korea.png'
 import enFlag from '../../../assets/images/national/eng.png'
 
-const Header = () => {
+// 다국어 처리 Props
+interface HeaderProps {
+  onLanguageChange: (language: string) => void;
+}
+
+const Header = ({ onLanguageChange }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuOpen = () => {
@@ -42,10 +47,10 @@ const Header = () => {
         <MobileNav $isMenuOpen={ isMenuOpen }>
           <div className={ HeaderStyle.mobile__header }>
             <div className={ HeaderStyle.multiple__language }>
-              <button type='button'>
+              <button type='button' onClick={() => onLanguageChange('ko')}>
                 <span><img src={ koFlag } alt="Korean" /></span>
               </button>
-              <button type='button'>
+              <button type='button' onClick={() => onLanguageChange('en')}>
                 <span><img src={ enFlag } alt="English" /></span>
               </button>
             </div>

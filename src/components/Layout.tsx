@@ -2,10 +2,14 @@ import Header from './layout/header/Header'
 import { Outlet } from 'react-router-dom'
 import FixedUtil from './layout/fixed/FixedUtil'
 
-const Layout = () => {
+interface LayoutProps {
+  onLanguageChange: (language: string) => void;
+}
+
+const Layout = ({ onLanguageChange }: LayoutProps) => {
   return (
     <>
-      <Header />
+      <Header onLanguageChange={onLanguageChange} />
       <main id='main'>
         <Outlet />
       </main>

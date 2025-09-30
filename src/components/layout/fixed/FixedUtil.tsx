@@ -115,6 +115,10 @@ const FixedMail = styled.div`
     writing-mode: vertical-lr;
   }
 
+  @media (max-width: 500px) {
+    display: none;
+  }
+
   @media (min-width: 992px) {
     left: 2rem;
   }
