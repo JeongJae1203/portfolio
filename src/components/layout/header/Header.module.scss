@@ -64,6 +64,23 @@
   height: 7rem;
   padding: 0 2rem;
 
+  .multiple__language {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .5rem 2rem;
+    background-color: map.get($colors, "primary");
+    border-radius: 45px;
+
+    button {
+      max-width: 2rem;
+    }
+
+    span {
+      height: 2rem;
+    }
+  }
+
   .mobileMenuClose {
     svg {
       width: 2.6rem;

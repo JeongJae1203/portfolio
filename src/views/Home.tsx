@@ -1,11 +1,10 @@
-import { useTranslation } from 'react-i18next';
+import Intro from '../components/intro/Intro';
 
 const Home = () => {
-  const { t } = useTranslation();
 
   return (
     <>
-      <h1>{t('greeting')}</h1>
+      <Intro />
     </>
   )
 }

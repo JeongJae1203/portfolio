@@ -3,6 +3,8 @@ import HeaderStyle from './Header.module.scss'
 import { RiAlignRight, RiCloseLine } from '@remixicon/react'
 import styled, { css } from 'styled-components'
 import { useState } from 'react'
+import koFlag from '../../../assets/images/national/korea.png'
+import enFlag from '../../../assets/images/national/eng.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,6 +41,14 @@ const Header = () => {
         </button>
         <MobileNav $isMenuOpen={ isMenuOpen }>
           <div className={ HeaderStyle.mobile__header }>
+            <div className={ HeaderStyle.multiple__language }>
+              <button type='button'>
+                <span><img src={ koFlag } alt="Korean" /></span>
+              </button>
+              <button type='button'>
+                <span><img src={ enFlag } alt="English" /></span>
+              </button>
+            </div>
             <button 
               type='button' 
               className={ HeaderStyle.mobileMenuClose }

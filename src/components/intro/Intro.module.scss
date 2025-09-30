@@ -1,0 +1,33 @@
+.intro {
+  position: relative;
+  height: calc(100vh - 7rem);
+  padding: 5rem 0 0;
+
+  .inner {
+    position: relative;
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .intro__info {
+    .intro__summary {
+      font-size: 2rem;
+    }
+  }
+}
+
+/** Media Query */
+@media (max-width: 500px) {
+  .intro {
+    .inner {
+      padding: 0 1.25rem;
+    }
+
+    .intro__info {
+      .intro__summary {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
