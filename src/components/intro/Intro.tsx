@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import IntroStyle from './Intro.module.scss'
+import { RiScrollToBottomLine } from '@remixicon/react';
 
 const Intro = () => {
   const { t } = useTranslation();
@@ -12,6 +13,9 @@ const Intro = () => {
           <p className={ IntroStyle.self }>{t('hello')} <strong>{t('name')}</strong> {t('helloEnd')}</p>
           <p className={ IntroStyle.description }>{t('summary')}</p>
         </div>
+      </div>
+      <div className={ IntroStyle.scroll__icon }>
+        <RiScrollToBottomLine />
       </div>
     </section>
   )

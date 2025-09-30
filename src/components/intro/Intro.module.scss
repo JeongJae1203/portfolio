@@ -41,6 +41,16 @@
       color: rgba(255, 255, 255, 0.8);
     }
   }
+
+  .scroll__icon {
+    position: absolute;
+    bottom: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+    animation: scroll 1.5s ease-in-out infinite;
+  }
 }
 
 /** Media Query */
@@ -77,5 +87,15 @@
         font-size: 8rem;
       }
     }
+  }
+}
+
+/** Animation */
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(2rem);
   }
 }
