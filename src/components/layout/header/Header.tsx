@@ -33,6 +33,16 @@ const Header = ({ onLanguageChange }: HeaderProps) => {
             <li><Link to="/about">About</Link></li>
             <li><Link to="/projects">Projects</Link></li>
             <li><Link to="/contact">Contact</Link></li>
+            <li>
+              <div className={ HeaderStyle.multiple__language }>
+                <button type='button' onClick={() => onLanguageChange('ko')}>
+                  <span><img src={ koFlag } alt="Korean" /></span>
+                </button>
+                <button type='button' onClick={() => onLanguageChange('en')}>
+                  <span><img src={ enFlag } alt="English" /></span>
+                </button>
+              </div>
+            </li>
           </ul>
         </nav>
         <button 

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import IntroStyle from './Intro.module.scss'
-import { RiScrollToBottomLine } from '@remixicon/react';
+import { RiDownloadLine, RiGithubFill, RiScrollToBottomLine } from '@remixicon/react';
 
 const Intro = () => {
   const { t } = useTranslation();
@@ -11,7 +11,24 @@ const Intro = () => {
         <div className={ IntroStyle.intro__info }>
           <span className={ IntroStyle.intro__summary }>Web Developer</span>
           <p className={ IntroStyle.self }>{t('hello')} <strong>{t('name')}</strong> {t('helloEnd')}</p>
-          <p className={ IntroStyle.description }>{t('summary')}</p>
+          <p className={ IntroStyle.description }>
+            {t('summary')}
+            <br />
+            {t('summary2')}
+          </p>
+        </div>
+        <div className={ IntroStyle.btn__container }>
+          <a href="/file/resume.hwp" download={true} className={ IntroStyle.btn__download }>
+            <span>{t('download')}</span>
+            <RiDownloadLine />
+          </a>
+          <a 
+            href="https://github.com/JeongJae1203" 
+            target="_blank" 
+            className={ IntroStyle.btn__github }
+          >
+            <RiGithubFill />
+          </a>
         </div>
       </div>
       <div className={ IntroStyle.scroll__icon }>

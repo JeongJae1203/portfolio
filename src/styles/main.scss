@@ -43,3 +43,7 @@ button {
 }
 
 .inner { position: relative; max-width: 144rem; margin: 0 auto; padding: 0 2rem; }
+
+@media all and (max-width: 500px) {
+  .inner { padding: 0 1.25rem; }
+}

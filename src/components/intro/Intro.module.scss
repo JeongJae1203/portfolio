@@ -39,8 +39,44 @@
         weight: 400;
       }
       color: rgba(255, 255, 255, 0.8);
+      line-height: 1.5;
+      word-break: keep-all;
     }
   }
+
+  .btn__container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 4rem;
+
+    .btn__download {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 2rem;
+      border: 1px solid map.get($colors, "primary");
+      border-radius: 45px;
+      font-size: 1.6rem;
+      color: map.get($colors, "primary");
+      transition: .4s;
+
+      &:hover {
+        background-color: map.get($colors, "primary");
+        color: map.get($colors, "white");
+      }
+    }
+
+    .btn__github {
+      color: map.get($colors, "primary");
+
+      svg {
+        width: 2.6rem;
+        height: 2.6rem;
+      }
+    }
+  }
+
 
   .scroll__icon {
     position: absolute;
@@ -74,6 +110,12 @@
         font-size: 1.4rem;
       }
     }
+
+    .btn__container {
+      .btn__download {
+        font-size: 1.4rem;
+      }
+    }
   }
 }
 
@@ -85,6 +127,17 @@
       .self {
         margin: 6rem 0; 
         font-size: 8rem;
+      }
+    }
+
+    .btn__container {
+      gap: 3rem;
+
+      .btn__github {
+        svg {
+          width: 3rem;
+          height: 3rem;
+        }
       }
     }
   }

@@ -115,7 +115,7 @@ const FixedMail = styled.div`
     writing-mode: vertical-lr;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     display: none;
   }
 

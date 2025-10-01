@@ -2,5 +2,21 @@
   "hello": "Hello, I'm ",
   "name": "JeongJae Lee.",
   "helloEnd": ".",
-  "summary": "Thank you for visiting my web portfolio."
+  "summary": "Thank you for visiting my web portfolio.",
+  "summary2": "My portfolio currently supports multilingualism, and the languages I support are Korean and English.",
+  "download": "Download Resume",
+  "about": "About",
+  "shortProfile1": "Hello, I'm a frontend developer who prioritizes user experience and gradually grows. My name is JeongJae Lee.",
+  "shortProfile2": "I've been working as a web publisher for the past 4 years, building a deep understanding of web standards and accessibility while adhering to them. This experience has been a great asset in providing users with robust web foundations.",
+  "shortProfile3": "Now, I want to create more valuable value by moving beyond static screens and implementing dynamic functions and business logic.",
+  "shortProfile4": "I firmly believe that successful projects are not individual efforts but are made by 'teams'. Transparent and constructive communication with colleagues provides clues to problem-solving and is the most important driving force for achieving common goals.",
+  "shortProfile5": "Ultimately, I want to use user feedback as a compass for technical improvement. I will not stop learning new technologies and will reflect user voices to gradually improve the service.",
+  "keyword": "Keyword",
+  "keywordDesc" : "It's a keyword that represents my strength.",
+  "keyword1" : "Constant_Learning",
+  "keyword2" : "Never_give_up",
+  "keyword3" : "Communication",
+  "keyword4" : "Responsibility",
+  "career": "Career",
+  "education": "Education"
 }
