@@ -209,7 +209,7 @@ const About = () => {
 
 
 const AboutSection = styled.section`
-  padding: 5rem 0 0;
+  padding: 20rem 0 0;
 `;
 
 const ShortProfile = styled.div`
