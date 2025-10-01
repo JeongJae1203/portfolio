@@ -18,5 +18,9 @@
   "keyword3" : "소통",
   "keyword4" : "책임감",
   "career": "경력",
-  "education": "교육"
+  "education": "교육",
+  "skill": "기술 및 도구",
+  "Front-End": "프론트엔드",
+  "Back-End": "백엔드",
+  "Tools" : "도구"
 }

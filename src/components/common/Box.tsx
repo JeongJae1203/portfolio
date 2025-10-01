@@ -20,6 +20,7 @@ const BoxStyle = styled.div`
   height: 100%;
   padding: 1.5rem;
   background-color: #323232;
+  border-radius: 4px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, .5);
 
   @media all and (min-width: 768px) {

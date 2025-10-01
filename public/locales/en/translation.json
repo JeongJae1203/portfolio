@@ -18,5 +18,9 @@
   "keyword3" : "Communication",
   "keyword4" : "Responsibility",
   "career": "Career",
-  "education": "Education"
-}
+  "education": "Education",
+  "skill": "Skills & Tools",
+  "Front-End": "Front-End",
+  "Back-End": "Back-End",
+  "Tools": "Tools"
+} 

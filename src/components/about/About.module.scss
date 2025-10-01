@@ -24,9 +24,8 @@
 }
 
 .cont {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1.5rem;
 
   .title__wrap {
@@ -38,6 +37,60 @@
         weight: 400;
       }
       color: #a6a6a6;
+    }
+
+    .company {
+      margin: 3rem 0 1.5rem;
+      font: {
+        size: 2.4rem;
+        weight: 700;
+      }
+      color: map.get($colors, "white");
+    }
+
+    .department {
+      font: {
+        size: 1.4rem;
+        weight: 400;
+      }
+      color: map.get($colors, "white");
+
+      + .department {
+        margin-top: .75rem;
+      }
+    }
+  }
+
+  .charge__list {
+    margin-top: 5rem;
+
+    > li {
+      + li {
+        margin-top: .5rem;
+      }
+
+      span {
+        position: relative;
+        display: block;
+        padding-left: 1.25rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #a6a6a6;
+        line-height: 1.5;
+        letter-spacing: -.02rem;
+        word-break: keep-all;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: .85rem;
+          left: 0;
+          width: 4px;
+          height: 4px;
+          background-color: #a6a6a6;
+          border-radius: 100%;
+        }
+      }
     }
   }
 }
@@ -107,6 +160,49 @@
   background-position: bottom right;
 }
 
+.skill__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  .skill__item {
+    .title {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: map.get($colors, "white");
+    }
+
+    .list {
+      padding: 1.5rem;
+      background-color: #0c0c0c;
+      border-radius: 6px;
+
+      > li {
+        display: flex;
+        align-items: center;
+        
+        .image__icon {
+          img {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 5rem;
+            
+            &:not(:first-child) {
+              margin-left: 1rem;
+            }
+          }
+        }
+
+        span {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+
 @media all and (min-width: 768px) {
   .sub__title {
     font-size: 3rem;
@@ -129,7 +225,30 @@
   }
 
   .cont {
-    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+
+  .skill__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    .skill__item {
+      .title {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 992px) {
+  .skill__list {
+    gap: 3rem;
+
+    .list {
+      > li {
+        padding: 1rem;
+      }
+    }
   }
 }
