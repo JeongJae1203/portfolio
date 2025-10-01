@@ -5,6 +5,17 @@ import Box from '../common/Box';
 import AboutStyle from './About.module.scss';
 import CssImg from '../../assets/images/skill/CSS.svg';
 import ScssImg from '../../assets/images/skill/Sass.svg';
+import HTMLImg from '../../assets/images/skill/HTML.svg';
+import JSImg from '../../assets/images/skill/JavaScript.svg';
+import VueImg from '../../assets/images/skill/Vue.svg';
+import ReactImg from '../../assets/images/skill/React.svg';
+import NodeImg from '../../assets/images/skill/NodeJS-Light.svg';
+import MySQLImg from '../../assets/images/skill/MySQL-Light.svg';
+import VSCodeImg from '../../assets/images/skill/VSCode.svg';
+import IdeaImg from '../../assets/images/skill/Idea-Dark.svg';
+import GithubImg from '../../assets/images/skill/Github-Light.svg';
+import VercelImg from '../../assets/images/skill/Vercel-Light.svg';
+import ViteImg from '../../assets/images/skill/Vite-Light.svg';
 
 
 const About = () => {
@@ -115,18 +126,77 @@ const About = () => {
                     </div>
                     <span>CSS, SCSS</span>
                   </li>
+                  <li>
+                    <div className={ AboutStyle.image__icon }>
+                      <img src={ HTMLImg } alt="HTML" />
+                    </div>
+                    <span>HTML</span>
+                  </li>
+                  <li>
+                    <div className={ AboutStyle.image__icon }>
+                      <img src={ JSImg } alt="Javascript" />
+                    </div>
+                    <span>Javascript</span>
+                  </li>
+                  <li>
+                    <div className={ AboutStyle.image__icon }>
+                      <img src={ VueImg } alt="Vue.js" />
+                      <img src={ ReactImg } alt="React.js" />
+                    </div>
+                    <span>Vue.js, React.js</span>
+                  </li>
                 </ul>
               </div>
               <div className={ AboutStyle.skill__item }>
                 <h5 className={ AboutStyle.title }>{ t('Back-End') }</h5>
                 <ul className={ AboutStyle.list }>
-                  
+                  <li>
+                    <div className={ AboutStyle.image__icon }>
+                      <img src={ NodeImg } alt="Node.js" />
+                    </div>
+                    <span>Node.js</span>
+                  </li>
+                  <li>
+                    <div className={ AboutStyle.image__icon }>
+                      <img src={ MySQLImg } alt="MySQL" />
+                    </div>
+                    <span>MySQL</span>
+                  </li>
                 </ul>
               </div>
               <div className={ AboutStyle.skill__item }>
                 <h5 className={ AboutStyle.title }>{ t('Tools') }</h5>
                 <ul className={ AboutStyle.list }>
-                  
+                  <li>
+                    <div className={ AboutStyle.image__icon }>
+                      <img src={ VSCodeImg } alt="Visual Studio Code" />
+                    </div>
+                    <span>Visual Studio Code</span>
+                  </li>
+                  <li>
+                    <div className={ AboutStyle.image__icon }>
+                      <img src={ IdeaImg } alt="IntelliJ IDEA" />
+                    </div>
+                    <span>IntelliJ IDEA</span>
+                  </li>
+                  <li>
+                    <div className={ AboutStyle.image__icon }>
+                      <img src={ GithubImg } alt="Github" />
+                    </div>
+                    <span>Github</span>
+                  </li>
+                  <li>
+                    <div className={ AboutStyle.image__icon }>
+                      <img src={ VercelImg } alt="Vercel" />
+                    </div>
+                    <span>Vercel</span>
+                  </li>
+                  <li>
+                    <div className={ AboutStyle.image__icon }>
+                      <img src={ ViteImg } alt="Vite" />
+                    </div>
+                    <span>Vite</span>
+                  </li>
                 </ul>
               </div>
             </div>

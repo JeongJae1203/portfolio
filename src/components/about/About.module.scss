@@ -163,13 +163,15 @@
 .skill__list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
 
   .skill__item {
     .title {
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-      font-weight: 700;
+      margin-bottom: 1.5rem;
+      font: {
+        size: 1.8rem;
+        weight: 400;
+      }
       color: map.get($colors, "white");
     }
 
@@ -181,12 +183,13 @@
       > li {
         display: flex;
         align-items: center;
-        
+        padding: 1rem 0;
+
         .image__icon {
           img {
             display: inline-block;
             vertical-align: middle;
-            max-width: 5rem;
+            max-width: 4rem;
             
             &:not(:first-child) {
               margin-left: 1rem;
@@ -205,6 +208,7 @@
 
 @media all and (min-width: 768px) {
   .sub__title {
+    margin-bottom: 3.5rem;
     font-size: 3rem;
   }
 
@@ -233,6 +237,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 
+    > li {
+      height: 100%;
+    }
+
     .skill__item {
       .title {
         font-size: 2rem;
@@ -245,9 +253,13 @@
   .skill__list {
     gap: 3rem;
 
-    .list {
-      > li {
-        padding: 1rem;
+    .skill__item {
+      .list {
+        height: 100%;
+
+        > li {
+          padding: 1rem 1.5rem;
+        }
       }
     }
   }
