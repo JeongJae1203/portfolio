@@ -12,14 +12,14 @@ const ProjectList = ({ project } : ProjectListProps) => {
     return;
   }
 
-  const { name, keyword, description, url, github } = project;
+  const { name, keyword, description, github, thumbnail } = project;
   const openGitHubHandler = () => {
     window.open(github, '_blank');
   }
-  
+
   return (
     <ProjectItemArticle>
-      <ProjectImg />
+      <ProjectImg style={{ backgroundImage: `url(${thumbnail})` }} />
       <ProjectContent>
         <strong className="project__name">{ name }</strong>
         <p className="project__desc">{ description }</p>
@@ -52,7 +52,7 @@ const ProjectList = ({ project } : ProjectListProps) => {
   )
 }
 
-const ProjectItemArticle = styled.article`
+const ProjectItemArticle = styled.div`
   position: relative;
   width: 100%;
   background-color: #323232;
@@ -145,6 +145,11 @@ const BtnContainer = styled.div`
     font-size: 1.4rem;
     font-weight: 400;
     color: #fff;
+    transition: .4s;
+
+    &:hover {
+      background-color: #333333;
+    }
   }
 
   .detail__btn {
@@ -156,6 +161,12 @@ const BtnContainer = styled.div`
     font-size: 1.4rem;
     font-weight: 400;
     color: #fff;
+    transition: .4s;
+
+    &:hover {
+      background-color: #fff;
+      color: #212121;
+    }
   }
 `;
 
