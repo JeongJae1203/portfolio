@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-
-interface MainTitleProps {
-  title?: string;
-}
+import type { MainTitleProps } from '../../types/type';
 
 const MainTitle = ({ title } : MainTitleProps) => {
   return (
@@ -14,13 +11,13 @@ const MainTitle = ({ title } : MainTitleProps) => {
 
 const MainTitleStyle = styled.h2`
   margin-bottom: 3rem;
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: -0.05em;
 
-  @media all and (max-width: 500px) {
-    font-size: 3.5rem;
+  @media all and (min-width: 768px) {
+    font-size: 5.5rem;
   }
 `;
 

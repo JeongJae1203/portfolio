@@ -23,5 +23,7 @@
   "Front-End": "프론트엔드",
   "Back-End": "백엔드",
   "Tools" : "도구",
-  "project": "프로젝트"
+  "project": "프로젝트",
+  "linkToGithub": "Github 보기",
+  "linkToDetail": "자세히 보기"
 }

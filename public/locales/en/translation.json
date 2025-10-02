@@ -23,5 +23,7 @@
   "Front-End": "Front-End",
   "Back-End": "Back-End",
   "Tools": "Tools",
-  "project" : "Projects"
+  "project" : "Projects",
+  "linkToGithub" : "Link to Github",
+  "linkToDetail" : "Link to Detail"
 } 

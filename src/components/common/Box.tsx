@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-
-type ChildrenProps = {
-  children?: React.ReactNode;
-}
+import type { ChildrenProps } from '../../types/type';
 
 const Box = ({ children } : ChildrenProps) => {
   return (
