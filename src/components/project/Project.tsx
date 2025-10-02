@@ -49,6 +49,11 @@ const ProjectGrid = styled.div`
   gap: 2rem;
 
   @media all and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  @media all and (min-width: 992px) {
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
   }

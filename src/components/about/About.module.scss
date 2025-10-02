@@ -199,6 +199,7 @@
 
         span {
           margin-left: auto;
+          font-size: 1.4rem;
         }
       }
     }
@@ -245,6 +246,10 @@
       .title {
         font-size: 2rem;
       }
+
+      .list {
+        height: 100%;
+      }
     }
   }
 }
@@ -255,10 +260,12 @@
 
     .skill__item {
       .list {
-        height: 100%;
-
         > li {
           padding: 1rem 1.5rem;
+
+          span {
+            font-size: 1.6rem;
+          }
         }
       }
     }
