@@ -25,5 +25,9 @@
   "Tools": "Tools",
   "project" : "Projects",
   "linkToGithub" : "Link to Github",
-  "linkToDetail" : "Link to Detail"
+  "linkToDetail" : "Link to Detail",
+  "sincerely" : "Site based on React.js, Styled Components, and SCSS.",
+  "thanks" : "Thank you.",
+  "sinDesc" : "To grow into a front-end developer, we actively challenge unfamiliar technologies",
+  "sinDesc2" : "I will not give up and become a developer who does it until the end."
 } 

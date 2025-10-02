@@ -34,6 +34,7 @@ const Project = () => {
 }
 
 const ProjectSection = styled.section`
+  height: 100vh;
   padding: 20rem 0 0;
 `;
 

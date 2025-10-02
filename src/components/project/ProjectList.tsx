@@ -57,7 +57,11 @@ const ProjectItemArticle = styled.div`
   width: 100%;
   background-color: #323232;
   border-radius: 5px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, .4);
+  transition: .4s;
+
+  &:hover {
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, .4);
+  }
 `;
 
 const ProjectImg = styled.div`
@@ -108,6 +112,8 @@ const ProjectContent = styled.div`
     font-size: 1.4rem;
     font-weight: 400;
     color: #a6a6a6;
+    line-height: 1.3;
+    word-break: keep-all;
   }
 
   .keyword__wrap {
