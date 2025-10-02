@@ -80,6 +80,7 @@ const FixedTop = styled.div<{ $isActiveYn?: boolean }>`
     opacity: 1;
     visibility: visible;
   `}
+  z-index: 100;
   transition: .4s;
 
   > div {

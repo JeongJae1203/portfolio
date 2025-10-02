@@ -11,6 +11,7 @@ const Footer = () => {
           Copyright 2025. LEEJEONGJAE. All Rights reserved. <br />
           { t('sincerely') }
         </p>
+        <p>{ t('lastUpdated') } 2025.10.02</p>
       </div>
     </FooterSection>
   )
@@ -25,6 +26,11 @@ const FooterSection = styled.footer`
     color: #a6a6a6;
     text-align: center;
     line-height: 1.5;
+
+    + p {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
   }
 
   @media all and (min-width: 768px) {

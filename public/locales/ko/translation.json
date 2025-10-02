@@ -29,5 +29,6 @@
   "sincerely": "React.js, Styled Components, SCSS 기반으로 제작된 사이트입니다.",
   "thanks" : "감사합니다.",
   "sinDesc" : "프론트엔드 개발자로 성장하기 위해 낯선 기술에도 적극적으로 도전하고",
-  "sinDesc2" : "포기하지 않고, 끝까지 해내는 개발자가 되겠습니다."
+  "sinDesc2" : "포기하지 않고, 끝까지 해내는 개발자가 되겠습니다.",
+  "lastUpdated" : "마지막 업데이트 일자 : "
 }
