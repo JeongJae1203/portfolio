@@ -47,3 +47,15 @@ button {
 }
 
 .inner { position: relative; max-width: 144rem; margin: 0 auto; padding: 0 2rem; }
+
+
+.fade__area {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: .6s;
+
+  &.intersecting { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}

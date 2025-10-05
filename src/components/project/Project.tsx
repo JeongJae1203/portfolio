@@ -41,7 +41,7 @@ const ProjectSection = styled.section`
 const ProjectInner = styled.article`
   position: relative;
   max-width: 120rem;
-  margin: 0 auto;
+  margin: 5rem auto;
 `;
 
 const ProjectGrid = styled.div`
