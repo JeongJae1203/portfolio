@@ -19,7 +19,10 @@ const Project = () => {
               <ProjectGrid>
                 {
                   pjrtData.map(project => (
-                    <ProjectList key={project.id} project={project} />
+                    <ProjectList 
+                      key={project.id} 
+                      project={project} 
+                    />
                   ))
                 }
               </ProjectGrid>
@@ -35,7 +38,7 @@ const Project = () => {
 
 const ProjectSection = styled.section`
   min-height: 100vh;
-  padding: 20rem 0 0;
+  margin: 20rem 0 0;
 `;
 
 const ProjectInner = styled.article`

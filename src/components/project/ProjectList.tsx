@@ -2,53 +2,65 @@ import styled from 'styled-components'
 import type { ProjectProps } from '../../types/type';
 import { RiExternalLinkLine, RiGithubFill } from '@remixicon/react';
 import { t } from 'i18next';
+import { useOpenModal } from '../../stores/useModalStroe';
 
 interface ProjectListProps {
   project?: ProjectProps;
 }
 
 const ProjectList = ({ project } : ProjectListProps) => {
+  const { openModal } = useOpenModal();
+
   if (!project) {
     return;
   }
 
   const { name, keyword, description, github, thumbnail } = project;
+
   const openGitHubHandler = () => {
     window.open(github, '_blank');
   }
 
+  const openModalHandler = () => {
+    openModal(project);
+    document.body.style.overflow = 'hidden';
+  }
+
   return (
-    <ProjectItemArticle>
-      <ProjectImg style={{ backgroundImage: `url(${thumbnail})` }} />
-      <ProjectContent>
-        <strong className="project__name">{ name }</strong>
-        <p className="project__desc">{ description }</p>
-        <div className="keyword__wrap">
-          {
-            keyword && keyword.map(kwrd => (
-              <span key={kwrd} className="label">{kwrd}</span>
-            ))
-          }
-        </div>
-        <BtnContainer>
-          <button
-            type="button"
-            className="detail__btn"
-          >
-            <RiExternalLinkLine />
-            <span>{ t('linkToDetail') }</span>
-          </button>
-          <button 
-            type="button" 
-            onClick={ openGitHubHandler }
-            className="github__btn"
-          >
-            <RiGithubFill />
-            <span>{ t('linkToGithub') }</span>
-          </button>
-        </BtnContainer>
-      </ProjectContent>
-    </ProjectItemArticle>
+    <>
+      <ProjectItemArticle>
+        <ProjectImg style={{ backgroundImage: `url(${thumbnail})` }} />
+        <ProjectContent>
+          <strong className="project__name">{ name }</strong>
+          <p className="project__desc">{ description }</p>
+          <div className="keyword__wrap">
+            {
+              keyword && keyword.map(kwrd => (
+                <span key={kwrd} className="label">{kwrd}</span>
+              ))
+            }
+          </div>
+          <BtnContainer>
+            <button
+              type="button"
+              className="detail__btn"
+              onClick={ openModalHandler }
+            >
+              <RiExternalLinkLine />
+              <span>{ t('linkToDetail') }</span>
+            </button>
+            <button 
+              type="button" 
+              onClick={ openGitHubHandler }
+              className="github__btn"
+            >
+              <RiGithubFill />
+              <span>{ t('linkToGithub') }</span>
+            </button>
+          </BtnContainer>
+        </ProjectContent>
+      </ProjectItemArticle>
+    </>
   )
 }
 

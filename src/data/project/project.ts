@@ -19,7 +19,7 @@ export const pjrtData = [
     id : 2,
     name : '포트폴리오',
     type : 'personal',
-    keyword : ['React.js', 'Typescript', 'SCSS', 'Styled-Components', 'Vite', 'Vercel'],
+    keyword : ['React.js', 'Typescript', 'SCSS', 'Styled-Components', 'Vite', 'Vercel', 'Zustand'],
     description : '프론트엔드 개발자로서의 포트폴리오 프로젝트입니다.',
     thumbnail: portfolioThumbnail,
     url: 'https://jarryjeong.vercel.app/',

@@ -17,25 +17,12 @@ export const useScrollFadeIn = (rootMargin = '0px') => {
     const { current } = dom;
 
     if (current) {
-      // 요소의 위치 정보 확인
-      const rect = current.getBoundingClientRect();
-      console.log('📏 요소 위치 정보:', {
-        top: rect.top,
-        bottom: rect.bottom,
-        left: rect.left,
-        right: rect.right,
-        width: rect.width,
-        height: rect.height,
-        viewportHeight: window.innerHeight
-      });
-
       observer = new IntersectionObserver(handleScroll, { 
         threshold: 0.2, // threshold를 낮춰서 테스트
         rootMargin: rootMargin,
       });
 
       observer.observe(current);
-      console.log('👀 IntersectionObserver 시작됨');
     } else {
       console.log('❌ current가 null입니다!');
     }

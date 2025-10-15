@@ -1,0 +1,166 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem 2rem 4rem;
+  overflow: hidden auto;
+  z-index: 102;
+
+  &__util {
+    position: absolute;
+    left: 2rem;
+    bottom: 1rem;
+    display: flex;
+    gap: 1.5rem;
+
+    &__btn {
+      background-color: #000;
+      border-radius: 100%;
+      box-shadow: 0 2px 6px rgba(255, 255, 255, .5);
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+        fill: #fff;
+      }
+    }
+  }
+
+  &__keyword_wrap {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+  }
+}
+
+.modal__content {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f8f9;
+
+  .modal__body {
+    &__top {
+      min-height: 15rem;
+      padding: 2rem;
+      background-color: rgba(59, 130, 246, 0.5);
+
+      &__keyword {
+        padding: .75rem;
+        background-color: #232323;
+        border-radius: 4px;
+        font: {
+          size: 1.2rem;
+          weight: 300;
+        }
+        color: #fff;
+      }
+    }
+
+    &__title {
+      margin-top: -3rem;
+    }
+
+    &__bottom {
+      &__thumbnail {
+        max-width: 20rem;
+        margin: 0 auto 2rem;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+
+        img {
+          border-radius: 4px;
+        }
+      }
+    }
+
+    &__description {
+      margin-top: 3rem;
+      text-align: center;
+      color: #666;
+    }
+  }
+
+  .modal__title {
+    font: {
+      size: 2rem;
+    }
+    text-align: center;
+    color: #212121;
+    letter-spacing: -.05rem;
+  }
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 101;
+}
+
+@media all and (min-width: 768px) {
+  .modal {
+    padding: 3rem 7rem 3rem 3rem;
+
+    &__keyword_wrap {
+      justify-content: center;
+    }
+
+    &__util {
+      top: 3rem;
+      left: auto;
+      right: 3.5rem;
+      bottom: auto;
+      flex-direction: column;
+    }
+
+    &__content {
+      .modal__body {
+        &__top {
+          min-height: 25rem;
+          padding-top: 4rem;
+        }
+
+        &__title {
+          margin-top: -8rem;
+        }
+
+        &__bottom {
+          &__thumbnail {
+            max-width: 40rem;
+            margin-bottom: 4rem;
+          }
+        }
+      }
+
+      .modal__title {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .modal {
+    &__content {
+      max-width: 144rem;
+      margin: 0 auto;
+
+      .modal__body {
+        &__bottom {
+          &__thumbnail {
+            max-width: 60rem;
+          }
+        }
+
+        &__title {
+          margin-top: -12rem;
+        }
+      }
+    }
+  }
+}

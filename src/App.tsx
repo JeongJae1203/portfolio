@@ -2,6 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Home from './views/Home';
 import Layout from './components/Layout';
+import { Suspense } from 'react';
+import Loading from './components/common/Loading';
 
 function App() {
   const { i18n } = useTranslation();
@@ -12,11 +14,13 @@ function App() {
   };
 
   return (
-    <Routes>
-      <Route element={<Layout onLanguageChange={handleLanguageChange} />}>
-        <Route path="/" element={<Home />} />
-      </Route>
-    </Routes>
+    <Suspense fallback={<Loading />}>
+      <Routes>
+        <Route element={<Layout onLanguageChange={handleLanguageChange} />}>
+          <Route path="/" element={<Home />} />
+        </Route>
+      </Routes>
+    </Suspense>
   )
 }
 
