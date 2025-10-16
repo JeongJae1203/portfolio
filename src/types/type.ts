@@ -17,6 +17,7 @@ export type ProjectProps = {
   keyword?: Array<string>,
   description?: string,
   thumbnail?: string,
+  stackList?: Array<string>,
   url?: string,
   github?: string
 }

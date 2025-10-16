@@ -120,6 +120,10 @@ const ProjectContent = styled.div`
   }
 
   .project__desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     margin: 3rem 0 6rem;
     font-size: 1.4rem;
     font-weight: 400;

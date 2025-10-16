@@ -11,7 +11,7 @@ const Footer = () => {
           Copyright 2025. LEEJEONGJAE. All Rights reserved. <br />
           { t('sincerely') }
         </p>
-        <p>{ t('lastUpdated') } 2025.10.02</p>
+        <p>{ t('lastUpdated') } 2025.10.16</p>
       </div>
     </FooterSection>
   )

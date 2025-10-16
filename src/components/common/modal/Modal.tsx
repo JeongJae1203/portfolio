@@ -1,4 +1,4 @@
-import { RiCloseLine, RiGithubFill } from '@remixicon/react';
+import { RiCloseLine, RiExternalLinkLine, RiGithubFill } from '@remixicon/react';
 import type { ProjectProps } from '../../../types/type';
 import ModalStyle from './Modal.module.scss';
 
@@ -10,6 +10,15 @@ interface ModalProps {
 const Modal = ({ projectData, closeModal }: ModalProps) => {
   const openGithub = () => {
     window.open(projectData?.github, '_blank');
+  }
+
+  const openSite = () => {
+    if (projectData?.url) {
+      window.open(projectData?.url, '_blank');
+    } else {
+      alert('현재 프로젝트는 개발 중이므로 외부 사이트 연결이 없습니다.');
+      return;
+    }
   }
 
   const closeModalHandler = () => {
@@ -44,6 +53,12 @@ const Modal = ({ projectData, closeModal }: ModalProps) => {
             </div>
             {/* description */}
             <p className={ ModalStyle.modal__body__description }>{ projectData?.description }</p>
+            {/* 기술 스택 */}
+            <div className={ ModalStyle.modal__body__stack }>
+              <div className={ ModalStyle.modal__inner }>
+                <h3 className={ ModalStyle.modal__title }>기술 스택</h3>
+              </div>
+            </div>
           </div>
         </div>
         <div className={ ModalStyle.modal__util }>
@@ -51,6 +66,7 @@ const Modal = ({ projectData, closeModal }: ModalProps) => {
             type="button" 
             className={ ModalStyle.modal__util__btn }
             onClick={ closeModalHandler }
+            data-text="닫기"
           >
             <RiCloseLine />
           </button>
@@ -58,8 +74,17 @@ const Modal = ({ projectData, closeModal }: ModalProps) => {
             type="button"
             className={ ModalStyle.modal__util__btn }
             onClick={ openGithub }
+            data-text="Github"
           >
             <RiGithubFill />
+          </button>
+          <button 
+            type="button"
+            className={ ModalStyle.modal__util__btn }
+            data-text="사이트"
+            onClick={ openSite }
+          >
+            <RiExternalLinkLine />
           </button>
         </div>
       </div>
