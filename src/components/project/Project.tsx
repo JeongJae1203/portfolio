@@ -3,13 +3,14 @@ import styled from "styled-components"
 import MainTitle from "../common/MainTitle";
 import ProjectList from './ProjectList';
 import { pjrtData } from '../../data/project/project';
+import ProjectStyle from './Project.module.scss';
 
 const Project = () => {
   const { t } = useTranslation();
 
   return (
     <ProjectSection>
-      <div className="inner">
+      <div className={ ProjectStyle.inner }>
         {/* 섹션 타이틀 */}
         <MainTitle title={ t('project') } />
         <ProjectInner>
@@ -38,7 +39,7 @@ const Project = () => {
 
 const ProjectSection = styled.section`
   min-height: 100vh;
-  margin: 40rem 0 0;
+  margin: 20rem 0 0;
 `;
 
 const ProjectInner = styled.article`

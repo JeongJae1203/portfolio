@@ -58,20 +58,20 @@ const About = () => {
               <Box>
                 <div className={ AboutStyle.title__wrap }>
                   <span className={ AboutStyle.date }>2020.10 - 2025.03</span>
-                  <h4 className={ AboutStyle.company }>(주)지플러스</h4>
-                  <p className={ AboutStyle.department }># e-biz 사업부 디자인팀 - 퍼블리싱 총괄</p>
+                  <h4 className={ AboutStyle.company }>{ t('gplus') }</h4>
+                  <p className={ AboutStyle.department }># { t('gplusDesc') }</p>
                 </div>
                 <ul className={ AboutStyle.charge__list }>
                   <li><span>HTML, CSS, JS, SCSS를 활용해 웹 표준 및 접근성 준수하여 자사 및 타사 웹 사이트 퍼블리싱</span></li>
-                  <li><span>웹 디자이너 및 백엔드 개발자와의 협업 툴을 적극적으로 활용해 지속적인 커뮤니테이션</span></li>
+                  <li><span>웹 디자이너 및 백엔드 개발자와의 협업 툴을 적극적으로 활용해 지속적인 커뮤니케이션</span></li>
                   <li><span>클라이언트와의 직접적인 소통 및 응대를 통해 프로젝트 구체화</span></li>
                 </ul>
               </Box>
               <Box>
                 <div className={ AboutStyle.title__wrap }>
                   <span className={ AboutStyle.date }>2018.02 - 2020.01</span>
-                  <h4 className={ AboutStyle.company }>(주)온더시스</h4>
-                  <p className={ AboutStyle.department }># 시스템 개발부 - Java 기반 웹 개발</p>
+                  <h4 className={ AboutStyle.company }>{ t('onthesys') }</h4>
+                  <p className={ AboutStyle.department }># { t('onthesysDesc') }</p>
                 </div>
                 <ul className={ AboutStyle.charge__list }>
                   <li><span>Spring, Tibero DB 한국수자원공사 및 기타 지자체 웹 수문 현황 모니터링 개발</span></li>

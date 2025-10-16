@@ -99,9 +99,10 @@
     gap: 2rem;
 
     > li {
-      a {
+      button {
         display: block;
         font-size: 1.8rem;
+        color: map.get($colors, "white");
       }
     }
   }
@@ -152,6 +153,15 @@
 
     .pcNav {
       display: block;
+
+      ul {
+        > li {
+          button {
+            font-size: 1.8rem;
+            color: map.get($colors, "white");
+          }
+        }
+      }
     }
   }
 

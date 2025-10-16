@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components'
 import { useState } from 'react'
 import koFlag from '../../../assets/images/national/korea.png'
 import enFlag from '../../../assets/images/national/eng.png'
+import { t } from 'i18next'
 
 // 다국어 처리 Props
 interface HeaderProps {
@@ -22,6 +23,18 @@ const Header = ({ onLanguageChange }: HeaderProps) => {
     setIsMenuOpen(false);
   }
 
+  /**
+   * 각 섹션으로 스크롤 이동
+   * @param sectionId 
+   */
+  const scrollToSection = (sectionId: string) => {
+    const element = document.querySelector(`#${sectionId}`);
+    if (element) {
+      (element as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false); // 모바일 메뉴 닫기
+  }
+
   return (
     <header id='header' className={ HeaderStyle.header }>
       <div className={ HeaderStyle.inner }>
@@ -30,9 +43,8 @@ const Header = ({ onLanguageChange }: HeaderProps) => {
         </h1>
         <nav className={ HeaderStyle.pcNav }>
           <ul>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><button onClick={() => scrollToSection('about')}>{ t('about') }</button></li>
+            <li><button onClick={() => scrollToSection('projects')}>{ t('project') }</button></li>
             <li>
               <div className={ HeaderStyle.multiple__language }>
                 <button type='button' onClick={() => onLanguageChange('ko')}>
@@ -74,9 +86,8 @@ const Header = ({ onLanguageChange }: HeaderProps) => {
           </div>
           <nav className={ HeaderStyle.mobileNav }>
             <ul>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/projects">Projects</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li><button onClick={() => scrollToSection('about')}>{ t('about') }</button></li>
+              <li><button onClick={() => scrollToSection('projects')}>{ t('project') }</button></li>
             </ul>
           </nav>
         </MobileNav>

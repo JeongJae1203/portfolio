@@ -1,0 +1,10 @@
+.inner { 
+  position: relative; 
+  max-width: 144rem; 
+  margin: 0 auto; 
+  padding: 0 2rem; 
+}
+
+@media all and (min-width: 1024px) {
+  .inner { padding-top: 20rem; }
+}

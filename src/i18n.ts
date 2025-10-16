@@ -16,7 +16,7 @@ i18n
   backend: {
     loadPath: "/locales/{{lng}}/{{ns}}.json", // 번역 파일 경로
   },
-  debug: true, // 디버깅 활성화
+  debug: false, // 디버깅 활성화
 });
 
 export default i18n;

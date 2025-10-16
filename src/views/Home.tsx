@@ -8,7 +8,7 @@ import { useOpenModal } from '../stores/useModalStroe';
 
 const Home = () => {
   const aboutFadeIn = useScrollFadeIn('100px');
-  const projectFadeIn = useScrollFadeIn('100px');
+  const projectFadeIn = useScrollFadeIn();
   const sincerelyFadeIn = useScrollFadeIn('-300px');
 
   const { isOpen, projectData, closeModal } = useOpenModal();
@@ -23,13 +23,13 @@ const Home = () => {
         /> 
       }
       <Intro />
-      <div ref={aboutFadeIn.ref} className="fade__area">
+      <div id="about" ref={aboutFadeIn.ref} className="fade__area">
         <About />
       </div>
-      <div ref={projectFadeIn.ref} className="fade__area">
+      <div id="projects" ref={projectFadeIn.ref} className="fade__area">
         <Project />
       </div>
-      <div ref={sincerelyFadeIn.ref} className="fade__area">
+      <div id="contact" ref={sincerelyFadeIn.ref} className="fade__area">
         <Sincerely />
       </div>
     </>
