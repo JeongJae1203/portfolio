@@ -7,9 +7,9 @@ import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 import { useOpenModal } from '../stores/useModalStroe';
 
 const Home = () => {
-  const aboutFadeIn = useScrollFadeIn('100px');
+  const aboutFadeIn = useScrollFadeIn('40px');
   const projectFadeIn = useScrollFadeIn();
-  const sincerelyFadeIn = useScrollFadeIn('-300px');
+  const sincerelyFadeIn = useScrollFadeIn('-150px');
 
   const { isOpen, projectData, closeModal } = useOpenModal();
 

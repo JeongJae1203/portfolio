@@ -5,6 +5,7 @@ export const useScrollFadeIn = (rootMargin = '0px') => {
 
   const handleScroll = useCallback(([entry]: IntersectionObserverEntry[]) => {
     const { current } = dom;
+    
     if (entry.isIntersecting) {
       current?.classList.add('intersecting');
     } else {
