@@ -44,8 +44,8 @@ const ProjectSection = styled.section`
 
 const ProjectInner = styled.article`
   position: relative;
-  max-width: 120rem;
-  margin: 5rem auto;
+  max-width: 144rem;
+  margin: 5rem 0;
 `;
 
 const ProjectGrid = styled.div`

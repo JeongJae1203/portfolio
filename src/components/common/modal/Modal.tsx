@@ -32,18 +32,7 @@ const Modal = ({ projectData, closeModal }: ModalProps) => {
         <div className={ ModalStyle.modal__content }>
           {/* body */}
           <div className={ ModalStyle.modal__body }>
-            <div className={ ModalStyle.modal__body__top }>
-              <div className={ ModalStyle.modal__keyword_wrap }>
-                {
-                  projectData?.keyword?.map((keyword) => (
-                    <span 
-                      key={ keyword } 
-                      className={ ModalStyle.modal__body__top__keyword }
-                    >#{ keyword }</span>
-                  ))
-                }
-              </div>
-            </div>
+            <div className={ ModalStyle.modal__body__top }></div>
             {/* title */}
             <div className={ ModalStyle.modal__body__title }>
               <div className={ ModalStyle.modal__body__bottom__thumbnail }>
