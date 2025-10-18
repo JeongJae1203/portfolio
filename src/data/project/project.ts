@@ -36,7 +36,7 @@ export const pjrtData = [
     description : 'Vue.js + Express.js로 개발한 간단한 개인 커뮤니티 프로젝트입니다. Pinia를 통해 로그인 상태 관리를 진행하였고, Toast UI Editor를 통해 글쓰기 기능을 구현하였습니다.',
     stackList: [],
     thumbnail: jjlogThumbnail,
-    url: '',
+    url: 'https://jjlog-kappa.vercel.app/',
     github : 'https://github.com/JeongJae1203/jjlog'
   }
 ];
