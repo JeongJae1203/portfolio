@@ -28,7 +28,7 @@
       line-height: 1.4;
 
       strong {
-        display: block;
+        display: inline-block;
         color: map.get($colors, "primary");
       }
     }
@@ -39,7 +39,7 @@
         weight: 400;
       }
       color: rgba(255, 255, 255, 0.8);
-      line-height: 1.5;
+      line-height: 2;
       word-break: keep-all;
     }
   }
@@ -110,6 +110,22 @@
     .btn__container {
       .btn__download {
         font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .intro {
+    .intro__info {
+      .self {
+        strong {
+          margin-left: 3rem;
+        }
+      }
+
+      .description {
+        text-align: right;
       }
     }
   }

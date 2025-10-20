@@ -10,11 +10,18 @@ const Intro = () => {
       <div className={ IntroStyle.inner }>
         <div className={ IntroStyle.intro__info }>
           <span className={ IntroStyle.intro__summary }>Web Developer</span>
-          <p className={ IntroStyle.self }>{t('hello')} <strong>{t('name')}</strong> {t('helloEnd')}</p>
+          <p className={ IntroStyle.self }>
+            {t('hello')} <br />
+            { t('developer') }
+            <strong>{t('name')}</strong> <br />
+            {t('helloEnd')}
+          </p>
           <p className={ IntroStyle.description }>
-            {t('summary')}
+            {t('summary3')}
             <br />
-            {t('summary2')}
+            {t('summary4')}
+            <br />
+            {t('summary5')}
           </p>
         </div>
         <div className={ IntroStyle.btn__container }>
