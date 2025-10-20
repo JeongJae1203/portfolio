@@ -206,6 +206,55 @@
   }
 }
 
+.contact {
+  height: 100%;
+  padding: 1.5rem 2rem;
+  background-color: #f7f7f7;
+  border-left: 8px solid map.get($colors, "primary");
+  font: {
+    size: 1.3rem;
+    weight: 400;
+  }
+  color: #111;
+
+  &__name {
+    margin-bottom: 1rem;
+    font: {
+      size: 1.5rem;
+      weight: 700;
+    }
+  }
+
+  &__desc {
+    font: {
+      size: 1.3rem;
+      weight: 400;
+    }
+    color: #666;
+  }
+
+  &__list {
+    > li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1.2rem;
+
+      span {
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+
+        svg {
+          width: 2rem;
+          height: 2rem;
+          fill: #212529;
+        }
+      }
+    }
+  }
+}
+
 
 @media all and (min-width: 768px) {
   .sub__title {

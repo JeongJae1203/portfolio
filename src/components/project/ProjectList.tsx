@@ -123,6 +123,7 @@ const ProjectContent = styled.div`
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    min-height: 3.7rem;
     overflow: hidden;
     margin: 3rem 0 6rem;
     font-size: 1.4rem;

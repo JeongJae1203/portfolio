@@ -32,7 +32,9 @@ const Modal = ({ projectData, closeModal }: ModalProps) => {
         <div className={ ModalStyle.modal__content }>
           {/* body */}
           <div className={ ModalStyle.modal__body }>
-            <div className={ ModalStyle.modal__body__top }></div>
+            <div className={ ModalStyle.modal__body__top }>
+              <span className={ ModalStyle.modal__body__top__keyword}>{ projectData?.type }</span>
+            </div>
             {/* title */}
             <div className={ ModalStyle.modal__body__title }>
               <div className={ ModalStyle.modal__body__bottom__thumbnail }>
@@ -42,10 +44,22 @@ const Modal = ({ projectData, closeModal }: ModalProps) => {
             </div>
             {/* description */}
             <p className={ ModalStyle.modal__body__description }>{ projectData?.description }</p>
+            {/* 개발 기간 */}
+            <div className={ ModalStyle.modal__body__duration }>
+              <div className={ ModalStyle.modal__inner }>
+                <h3 className={ ModalStyle.modal__title }>✔ 개발 기간</h3>
+                <p className={ ModalStyle.modal__body__text }>{ projectData?.duration }</p>
+              </div>
+            </div>
             {/* 기술 스택 */}
             <div className={ ModalStyle.modal__body__stack }>
               <div className={ ModalStyle.modal__inner }>
-                <h3 className={ ModalStyle.modal__title }>기술 스택</h3>
+                <h3 className={ ModalStyle.modal__title }>✔ 기술 스택</h3>
+                <ul className={ ModalStyle.modal__body__list }>
+                  { projectData?.keyword?.map((keyword, index) => (
+                    <li key={ index }><span>{ keyword }</span></li>
+                  )) }
+                </ul>
               </div>
             </div>
           </div>

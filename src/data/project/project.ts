@@ -10,10 +10,11 @@ export const pjrtData = [
     id : 1,
     name : '대전세잔직업전문학교 리뉴얼',
     type : 'team',
-    keyword : ['HTML', 'SCSS', 'JavaScript', 'JQuery', 'Parcel', 'Vercel'],
+    keyword : ['HTML5', 'SCSS', 'JavaScript', 'JQuery', 'Parcel', 'Vercel', 'GSAP'],
     thumbnail: cezanneThumbnail,
     description : '교육기간 내 팀 프로젝트 주제로 선정된 대전세잔직업전문학교 리뉴얼 프로젝트입니다.',
     stackList: [],
+    duration : '2025.08.18 - 2025.08.29',
     url: 'https://renewal-cezanne.vercel.app/',
     github : 'https://github.com/JeongJae1203/renewal-cezanne',
   },
@@ -25,6 +26,7 @@ export const pjrtData = [
     description : '프론트엔드 개발자로서의 포트폴리오 프로젝트입니다.',
     stackList: [],
     thumbnail: portfolioThumbnail,
+    duration : '2025.09.28 - 현재',
     url: 'https://jarryjeong.vercel.app/',
     github : 'https://github.com/JeongJae1203/portfolio'
   },
@@ -36,6 +38,7 @@ export const pjrtData = [
     description : 'Vue.js + Express.js로 개발한 간단한 개인 커뮤니티 프로젝트입니다. Pinia를 통해 로그인 상태 관리를 진행하였고, Toast UI Editor를 통해 글쓰기 기능을 구현하였습니다.',
     stackList: [],
     thumbnail: jjlogThumbnail,
+    duration : '2025.10.09 - 현재',
     url: 'https://jjlog-kappa.vercel.app/',
     github : 'https://github.com/JeongJae1203/jjlog'
   }

@@ -51,6 +51,7 @@
       min-height: 15rem;
       padding: 2rem;
       background-color: rgba(59, 130, 246, 0.5);
+      text-align: center;
 
       &__keyword {
         padding: .75rem;
@@ -89,6 +90,26 @@
       color: #666;
       line-height: 1.3;
       word-break: keep-all;
+    }
+
+    &__text {
+      margin-top: 3rem;
+      text-align: center;
+      color: #212121;
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 3rem;
+
+      > li {
+        span {
+          color: #212121;
+        }
+      }
     }
   }
 
@@ -166,6 +187,10 @@
             margin-bottom: 4rem;
           }
         }
+
+        &__text {
+          font-size: 1.8rem;
+        }
       }
 
       .modal__title {
@@ -189,7 +214,7 @@
         }
 
         &__title {
-          margin-top: -12rem;
+          margin-top: -17rem;
         }
       }
     }

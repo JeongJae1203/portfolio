@@ -16,6 +16,7 @@ import IdeaImg from '../../assets/images/skill/Idea-Dark.svg';
 import GithubImg from '../../assets/images/skill/Github-Light.svg';
 import VercelImg from '../../assets/images/skill/Vercel-Light.svg';
 import ViteImg from '../../assets/images/skill/Vite-Light.svg';
+import { RiMailLine, RiPhoneLine } from '@remixicon/react';
 
 
 const About = () => {
@@ -48,7 +49,24 @@ const About = () => {
                   </div>
                 </div>
               </Box>
-              <Box></Box>
+              <Box>
+                <div className={ AboutStyle.contact }>
+                  <h3 className={ AboutStyle.contact__name }>{ t('name') }</h3>
+                  <p className={ AboutStyle.contact__desc }>{ t('contactDesc') }</p>
+                  <ul className={ AboutStyle.contact__list }>
+                    <li>
+                      <span><RiMailLine /> st20916@naver.com</span>
+                      <span>|</span>
+                      <span><RiPhoneLine /> 010-7263-0318</span>
+                    </li>
+                    <li>
+                      <span><RiMailLine /> jarryjeong@jarryjeong.pe.kr</span>
+                      <span>|</span>
+                      <span><RiPhoneLine /> 010-4350-1651</span>
+                    </li>
+                  </ul>
+                </div>
+              </Box>
             </ShortProfileBox>
           </ShortProfile>
           {/* 경력 */}
