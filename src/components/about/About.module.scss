@@ -160,48 +160,41 @@
   background-position: bottom right;
 }
 
-.skill__list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+.skill {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: rgba(#f8f9fa, .8);
+    border-radius: 4px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .5);
+  }
 
-  .skill__item {
-    .title {
-      margin-bottom: 1.5rem;
-      font: {
-        size: 1.8rem;
-        weight: 400;
+  &__item {
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      span {
+        opacity: 1;
+        visibility: visible;
       }
-      color: map.get($colors, "white");
     }
 
-    .list {
-      padding: 1.5rem;
-      background-color: #0c0c0c;
-      border-radius: 6px;
-
-      > li {
-        display: flex;
-        align-items: center;
-        padding: 1rem 0;
-
-        .image__icon {
-          img {
-            display: inline-block;
-            vertical-align: middle;
-            max-width: 4rem;
-            
-            &:not(:first-child) {
-              margin-left: 1rem;
-            }
-          }
-        }
-
-        span {
-          margin-left: auto;
-          font-size: 1.4rem;
-        }
-      }
+    span {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      opacity: 0;
+      visibility: hidden;
+      padding: .5rem;
+      background-color: rgba(#323232, .9);
+      border-radius: 4px;
+      font-size: 1.3rem;
+      z-index: 1;
+      transition: .5s;
     }
   }
 }
@@ -278,45 +271,21 @@
     }
   }
 
+  .skill {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    &__list {
+      padding: 3rem;
+    }
+  }
+
   .cont {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-
-  .skill__list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-
-    > li {
-      height: 100%;
-    }
-
-    .skill__item {
-      .title {
-        font-size: 2rem;
-      }
-
-      .list {
-        height: 100%;
-      }
-    }
-  }
 }
 
 @media all and (min-width: 992px) {
-  .skill__list {
-    gap: 3rem;
-
-    .skill__item {
-      .list {
-        > li {
-          padding: 1rem 1.5rem;
-
-          span {
-            font-size: 1.6rem;
-          }
-        }
-      }
-    }
-  }
 }

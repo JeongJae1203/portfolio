@@ -133,89 +133,71 @@ const About = () => {
           {/* 스킬 */}
           <CommonSection>
             <h4 className={ AboutStyle.sub__title }>{ t('skill') }</h4>
-            <div className={ AboutStyle.skill__list }>
-              <div className={ AboutStyle.skill__item }>
-                <h5 className={ AboutStyle.title }>{ t('Front-End') }</h5>
-                <ul className={ AboutStyle.list }>
-                  <li>
-                    <div className={ AboutStyle.image__icon }>
-                      <img src={ CssImg } alt="CSS" />
-                      <img src={ ScssImg } alt="SCSS" />
-                    </div>
-                    <span>CSS, SCSS</span>
-                  </li>
-                  <li>
-                    <div className={ AboutStyle.image__icon }>
-                      <img src={ HTMLImg } alt="HTML" />
-                    </div>
-                    <span>HTML</span>
-                  </li>
-                  <li>
-                    <div className={ AboutStyle.image__icon }>
-                      <img src={ JSImg } alt="Javascript" />
-                    </div>
-                    <span>Javascript</span>
-                  </li>
-                  <li>
-                    <div className={ AboutStyle.image__icon }>
-                      <img src={ VueImg } alt="Vue.js" />
-                      <img src={ ReactImg } alt="React.js" />
-                    </div>
-                    <span>Vue.js, React.js</span>
-                  </li>
-                </ul>
+            <div className={ AboutStyle.skill }>
+              <div className={ AboutStyle.skill__list }>
+                <div className={ AboutStyle.skill__item }>
+                  <img src={ CssImg } alt="CSS" />
+                  <span>CSS</span>
+                </div>
+                <div className={ AboutStyle.skill__item }>
+                  <img src={ ScssImg } alt="SCSS" />
+                  <span>SCSS</span>
+                </div>
+                <div className={ AboutStyle.skill__item }>
+                  <img src={ HTMLImg } alt="HTML" />
+                  <span>HTML</span>
+                </div>
+                <div className={ AboutStyle.skill__item }>
+                  <img src={ JSImg } alt="JavaScript" />
+                  <span>JavaScript</span>
+                </div>
+                <div className={ AboutStyle.skill__item }>
+                  <img src={ VueImg } alt="Vue.js" />
+                  <span>Vue.js</span>
+                </div>
+                <div className={ AboutStyle.skill__item }>
+                  <img src={ ReactImg } alt="React.js" />
+                  <span>React.js</span>
+                </div>
+                <div className={ AboutStyle.skill__item }>
+                  <img src={ NodeImg } alt="Node.js" />
+                  <span>Node.js</span>
+                </div>
+                <div className={ AboutStyle.skill__item }>
+                  <img src={ MySQLImg } alt="MySQL" />
+                  <span>MySQL</span>
+                </div>
+                <div className={ AboutStyle.skill__item }>
+                  <img src={ VSCodeImg } alt="VSCode" />
+                  <span>VSCode</span>
+                </div>
+                <div className={ AboutStyle.skill__item }>
+                  <img src={ IdeaImg } alt="IntelliJ IDEA" />
+                  <span>IntelliJ IDEA</span>
+                </div>
+                <div className={ AboutStyle.skill__item }>
+                  <img src={ GithubImg } alt="GitHub" />
+                  <span>GitHub</span>
+                </div>
+                <div className={ AboutStyle.skill__item }>
+                  <img src={ VercelImg } alt="Vercel" />
+                  <span>Vercel</span>
+                </div>
+                <div className={ AboutStyle.skill__item }>
+                  <img src={ ViteImg } alt="Vite" />
+                  <span>Vite</span>
+                </div>
               </div>
-              <div className={ AboutStyle.skill__item }>
-                <h5 className={ AboutStyle.title }>{ t('Back-End') }</h5>
-                <ul className={ AboutStyle.list }>
-                  <li>
-                    <div className={ AboutStyle.image__icon }>
-                      <img src={ NodeImg } alt="Node.js" />
-                    </div>
-                    <span>Node.js</span>
-                  </li>
-                  <li>
-                    <div className={ AboutStyle.image__icon }>
-                      <img src={ MySQLImg } alt="MySQL" />
-                    </div>
-                    <span>MySQL</span>
-                  </li>
-                </ul>
-              </div>
-              <div className={ AboutStyle.skill__item }>
-                <h5 className={ AboutStyle.title }>{ t('Tools') }</h5>
-                <ul className={ AboutStyle.list }>
-                  <li>
-                    <div className={ AboutStyle.image__icon }>
-                      <img src={ VSCodeImg } alt="Visual Studio Code" />
-                    </div>
-                    <span>Visual Studio Code</span>
-                  </li>
-                  <li>
-                    <div className={ AboutStyle.image__icon }>
-                      <img src={ IdeaImg } alt="IntelliJ IDEA" />
-                    </div>
-                    <span>IntelliJ IDEA</span>
-                  </li>
-                  <li>
-                    <div className={ AboutStyle.image__icon }>
-                      <img src={ GithubImg } alt="Github" />
-                    </div>
-                    <span>Github</span>
-                  </li>
-                  <li>
-                    <div className={ AboutStyle.image__icon }>
-                      <img src={ VercelImg } alt="Vercel" />
-                    </div>
-                    <span>Vercel</span>
-                  </li>
-                  <li>
-                    <div className={ AboutStyle.image__icon }>
-                      <img src={ ViteImg } alt="Vite" />
-                    </div>
-                    <span>Vite</span>
-                  </li>
-                </ul>
+              <div className={ AboutStyle.skill__spec }>
+                <div className={ AboutStyle.skill__spec__item }>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Vue.js</span>
+                  <span>React.js</span>
+                  <span>Node.js</span>
+                  <span>MySQL</span>
+                </div>
               </div>
             </div>
           </CommonSection>
