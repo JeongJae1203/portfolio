@@ -1,7 +1,7 @@
 import { RiArrowUpLine, RiGithubFill } from '@remixicon/react'
 import FixedUtilStyle from './Fixed.module.scss'
 import styled, { css } from 'styled-components'
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 const FixedUtil = () => {
   const [isActive, setIsActive] = useState(false);
@@ -19,19 +19,19 @@ const FixedUtil = () => {
   /**
    * 화면 상단으로 이동
    */
-  const scrollToTop = () => {
+  const scrollToTop = useCallback(() => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
-  }
+  }, []);
 
   /**
    * Github 이동
    */
-  const goToGithub = () => {
+  const goToGithub = useCallback(() => {
     window.open('https://github.com/JeongJae1203', '_blank');
-  }
+  }, []);
 
   return (
     <>

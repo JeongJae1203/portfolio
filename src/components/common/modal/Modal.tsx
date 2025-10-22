@@ -1,6 +1,7 @@
-import { RiCloseLine, RiExternalLinkLine, RiGithubFill } from '@remixicon/react';
+import { RiCloseLine, RiCodeSSlashLine, RiExternalLinkLine, RiGithubFill, RiStackOverflowLine } from '@remixicon/react';
 import type { ProjectProps } from '../../../types/type';
 import ModalStyle from './Modal.module.scss';
+import { useCallback } from 'react';
 
 interface ModalProps {
   projectData?: ProjectProps | null;
@@ -8,23 +9,23 @@ interface ModalProps {
 }
 
 const Modal = ({ projectData, closeModal }: ModalProps) => {
-  const openGithub = () => {
+  const openGithub = useCallback(() => {
     window.open(projectData?.github, '_blank');
-  }
+  }, [projectData?.github]);
 
-  const openSite = () => {
+  const openSite = useCallback(() => {
     if (projectData?.url) {
       window.open(projectData?.url, '_blank');
     } else {
       alert('현재 프로젝트는 개발 중이므로 외부 사이트 연결이 없습니다.');
       return;
     }
-  }
+  }, [projectData?.url]);
 
-  const closeModalHandler = () => {
+  const closeModalHandler = useCallback(() => {
     closeModal();
     document.body.style.overflow = 'initial';
-  }
+  }, [closeModal]);
 
   return (
     <>
@@ -47,14 +48,14 @@ const Modal = ({ projectData, closeModal }: ModalProps) => {
             {/* 개발 기간 */}
             <div className={ ModalStyle.modal__body__duration }>
               <div className={ ModalStyle.modal__inner }>
-                <h3 className={ ModalStyle.modal__title }>✔ 개발 기간</h3>
+                <h3 className={ ModalStyle.modal__title }><RiCodeSSlashLine /> 개발 기간</h3>
                 <p className={ ModalStyle.modal__body__text }>{ projectData?.duration }</p>
               </div>
             </div>
             {/* 기술 스택 */}
             <div className={ ModalStyle.modal__body__stack }>
               <div className={ ModalStyle.modal__inner }>
-                <h3 className={ ModalStyle.modal__title }>✔ 기술 스택</h3>
+                <h3 className={ ModalStyle.modal__title }><RiStackOverflowLine /> 기술 스택</h3>
                 <ul className={ ModalStyle.modal__body__list }>
                   { projectData?.keyword?.map((keyword, index) => (
                     <li key={ index }><span>{ keyword }</span></li>

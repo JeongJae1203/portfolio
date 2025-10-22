@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import HeaderStyle from './Header.module.scss'
 import { RiAlignRight, RiCloseLine } from '@remixicon/react'
 import styled, { css } from 'styled-components'
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import koFlag from '../../../assets/images/national/korea.png'
 import enFlag from '../../../assets/images/national/eng.png'
 import { t } from 'i18next'
@@ -15,25 +15,25 @@ interface HeaderProps {
 const Header = ({ onLanguageChange }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenuOpen = () => {
+  const handleMenuOpen = useCallback(() => {
     setIsMenuOpen(true);
-  }
+  }, []);
 
-  const handleMenuClose = () => {
+  const handleMenuClose = useCallback(() => {
     setIsMenuOpen(false);
-  }
+  }, []);
 
   /**
    * 각 섹션으로 스크롤 이동
    * @param sectionId 
    */
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = useCallback((sectionId: string) => {
     const element = document.querySelector(`#${sectionId}`);
     if (element) {
       (element as HTMLElement).scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false); // 모바일 메뉴 닫기
-  }
+  }, []);
 
   return (
     <header id='header' className={ HeaderStyle.header }>
