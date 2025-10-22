@@ -7,8 +7,8 @@ const Sincerely = () => {
   return (
     <SincerelySection>
       <div className="inner">
-        <SincerelyMent>{ t('thanks') }</SincerelyMent>
         <SincerelyDesc>{ t('sinDesc') } <br /> { t('sinDesc2') }</SincerelyDesc>
+        <SincerelyMent>{ t('thanks') }</SincerelyMent>
       </div>
     </SincerelySection>
   )
@@ -24,33 +24,20 @@ const SincerelySection = styled.section`
 
 const SincerelyMent = styled.strong`
   display: block;
-  font-size: 7rem;
-  font-weight: 700;
+  font-size: 5rem;
   color: #fff;
   text-align: center;
   text-shadow: 0 0 10px rgba(59, 130, 246, .8);
-
-  @media all and (min-width: 768px) {
-    font-size: 10rem;
-  }
-
-  @media all and (min-width: 992px) {
-    font-size: 16rem;
-  }
 `;
 
 const SincerelyDesc = styled.p`
-  margin-top: 6rem;
-  font-size: 2rem;
+  margin-bottom: 6rem;
+  font-size: 3rem;
   line-height: 1.5;
   text-align: center;
   word-break: keep-all;
   color: rgba(255, 255, 255, .8);
   letter-spacing: -.02em;
-
-  @media all and (min-width: 768px) {
-    margin-top: 10rem;
-  }
 `;
 
 export default Sincerely

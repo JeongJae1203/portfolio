@@ -55,20 +55,21 @@
       align-items: center;
       gap: 1rem;
       padding: 1rem 2rem;
-      border: 1px solid map.get($colors, "primary");
+      border: 1px solid map.get($colors, "white");
       border-radius: 45px;
       font-size: 1.6rem;
-      color: map.get($colors, "primary");
+      color: map.get($colors, "white");
       transition: .4s;
 
       &:hover {
+        border-color: map.get($colors, "primary");
         background-color: map.get($colors, "primary");
         color: map.get($colors, "white");
       }
     }
 
     .btn__github {
-      color: map.get($colors, "primary");
+      color: map.get($colors, "white");
 
       svg {
         width: 2.6rem;
@@ -137,7 +138,7 @@
     
     .intro__info {
       .self {
-        margin: 6rem 0; 
+        margin: 4rem 0; 
         font-size: 8rem;
       }
     }

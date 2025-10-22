@@ -57,9 +57,6 @@ const FixedUtil = () => {
           <span className={ FixedUtilStyle.fixedTop__tooltip }>TOP</span>
         </div>
       </FixedTop>
-      <FixedMail>
-        <a href="mailto:st20916@naver.com">st20916@naver.com</a>
-      </FixedMail>
     </>
   )
 }
@@ -93,39 +90,6 @@ const FixedTop = styled.div<{ $isActiveYn?: boolean }>`
 
   @media (min-width: 1200px) {
     right: 3rem;
-  }
-`;
-
-const FixedMail = styled.div`
-  position: fixed;
-  left: 1rem;
-  bottom: 5rem;
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -5rem;
-    transform: translateX(-50%);
-    width: 1px;
-    height: 4rem;
-    background-color: #fff;
-  }
-
-  > a {
-    writing-mode: vertical-lr;
-  }
-
-  @media (max-width: 767.98px) {
-    display: none;
-  }
-
-  @media (min-width: 992px) {
-    left: 2rem;
-  }
-
-  @media (min-width: 1200px) {
-    left: 3rem;
   }
 `;
 
