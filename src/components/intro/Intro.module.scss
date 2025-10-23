@@ -28,8 +28,17 @@
       line-height: 1.4;
 
       strong {
+        position: relative;
         display: inline-block;
         color: map.get($colors, "primary");
+
+        &::before {
+          content: "{ ";
+        }
+
+        &::after {
+          content: " }";
+        }
       }
     }
 
@@ -47,7 +56,7 @@
   .btn__container {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
     margin-top: 4rem;
 
     .btn__download {
@@ -90,6 +99,43 @@
   }
 }
 
+/* speech-bubble */
+:global .speech_bubble {
+  position: absolute;
+  max-width: 25rem;
+  padding: 1.5rem;
+  background-color: map.get($colors, "light-gray");
+  border-radius: 4px;
+  line-height: 1.5625;
+  word-break: keep-all;
+  opacity: 0;
+  visibility: hidden;
+  color: #333;
+  transition: .35s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 0;
+    height: 0;
+    margin-top: -14px;
+    margin-left: -14px;
+    border: 14px solid transparent;
+    border-top: 0;
+    border-left: 0;
+    border-bottom-color: map.get($colors, "light-gray");
+  }
+
+  &.on {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+
 /** Media Query */
 @media (max-width: 500px) {
   .intro {
@@ -130,6 +176,10 @@
       }
     }
   }
+
+  :global .speech_bubble {
+    max-width: 40rem;
+  }
 }
 
 @media all and (min-width: 992px) {
@@ -138,7 +188,7 @@
     
     .intro__info {
       .self {
-        margin: 4rem 0; 
+        margin: 4rem 0 8rem; 
         font-size: 8rem;
       }
     }

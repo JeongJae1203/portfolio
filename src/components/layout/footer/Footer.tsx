@@ -10,7 +10,7 @@ const Footer = () => {
         <p>
           Copyright 2025. LEEJEONGJAE. All Rights reserved. <br />
         </p>
-        <p>{ t('lastUpdated') } 2025.10.20</p>
+        <p>{ t('lastUpdated') } 2025.10.23</p>
       </div>
     </FooterSection>
   )
