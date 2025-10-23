@@ -9,8 +9,6 @@ const Intro = () => {
   const speechBubbleRef = useRef<HTMLDivElement>(null);
 
   const handleSpeechBubble = useCallback((e: React.MouseEvent<HTMLSelectElement>) => {
-    console.log(e.currentTarget.offsetLeft)
-
     if (speechBubbleRef.current) {
       speechBubbleRef.current.classList.add('on');
       speechBubbleRef.current.style.top = `${e.currentTarget.offsetTop + 120}px`;

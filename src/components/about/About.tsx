@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import MainTitle from '../common/MainTitle'
 import styled from 'styled-components';
-import Box from '../common/Box';
 import AboutStyle from './About.module.scss';
 import CssImg from '../../assets/images/skill/CSS.svg';
 import ScssImg from '../../assets/images/skill/Sass.svg';
@@ -29,36 +28,25 @@ const About = () => {
           <MainTitle title={ t('about') } />
           <div className={ AboutStyle.about }>
             <div className={ AboutStyle.about_myself }>
-              
+              <p>{ t('shortProfile1') }</p>
+              <p>{ t('shortProfile2') }</p>
+              <p>{ t('shortProfile3') }</p>
+              <p>{ t('shortProfile4') }</p>
+              <p>{ t('shortProfile5') }</p>
             </div>
             <div className={ AboutStyle.about_keyword }>
-
+              <div className={ AboutStyle.keyword__cont }>
+                <h3 className={ AboutStyle.keyword__title }>{ t('keyword') }</h3>
+                <p className={ AboutStyle.keyword__desc }>{ t('keywordDesc') }</p>
+                <div className={ AboutStyle.keyword__label__wrap }>
+                  <span className={ AboutStyle.keyword__label }># { t('keyword1') }</span>
+                  <span className={ AboutStyle.keyword__label }># { t('keyword2') }</span>
+                  <span className={ AboutStyle.keyword__label }># { t('keyword3') }</span>
+                  <span className={ AboutStyle.keyword__label }># { t('keyword4') }</span>
+                </div>
+              </div>
             </div>
           </div>
-
-          <ShortProfile>
-            <Box>
-              <p className={ AboutStyle.shortProfile__cont }>{ t('shortProfile1') }</p>
-              <p className={ AboutStyle.shortProfile__cont }>{ t('shortProfile2') }</p>
-              <p className={ AboutStyle.shortProfile__cont }>{ t('shortProfile3') }</p>
-              <p className={ AboutStyle.shortProfile__cont }>{ t('shortProfile4') }</p>
-              <p className={ AboutStyle.shortProfile__cont }>{ t('shortProfile5') }</p>
-            </Box>
-            <ShortProfileBox>
-              <Box>
-                <div className={ AboutStyle.keyword__cont }>
-                  <h3 className={ AboutStyle.keyword__title }>{ t('keyword') }</h3>
-                  <p className={ AboutStyle.keyword__desc }>{ t('keywordDesc') }</p>
-                  <div className={ AboutStyle.keyword__label__wrap }>
-                    <span className={ AboutStyle.keyword__label }># { t('keyword1') }</span>
-                    <span className={ AboutStyle.keyword__label }># { t('keyword2') }</span>
-                    <span className={ AboutStyle.keyword__label }># { t('keyword3') }</span>
-                    <span className={ AboutStyle.keyword__label }># { t('keyword4') }</span>
-                  </div>
-                </div>
-              </Box>
-            </ShortProfileBox>
-          </ShortProfile>
           {/* 스킬 */}
           <CommonSection>
             <h4 className={ AboutStyle.sub__title }>{ t('skill') }</h4>
@@ -139,24 +127,6 @@ const About = () => {
 
 const AboutSection = styled.section`
   padding: 20rem 0 0;
-`;
-
-const ShortProfile = styled.div`
-  display: grid;
-  grid-template-columns: 100%;
-  gap: 2rem;
-
-  @media all and (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-`;
-
-const ShortProfileBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  width: 100%;
 `;
 
 const CommonSection = styled.section`

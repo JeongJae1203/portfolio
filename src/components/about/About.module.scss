@@ -23,6 +23,39 @@
   }
 }
 
+.about {
+  position: relative;
+
+  &_myself {
+    position: relative;
+    padding: 1.5rem;
+    border-top: 3px solid map.get($colors, "primary");
+
+    p {
+      font: {
+        size: 1.4rem;
+        weight: 300;
+      }
+      white-space: pre-line;
+      word-break: keep-all;
+      line-height: 1.5625;
+    }
+  }
+
+  &_keyword {
+    padding: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 .cont {
   display: grid;
   grid-template-columns: 1fr;
@@ -256,6 +289,14 @@
     font-size: 3rem;
   }
 
+  .about {
+    &_myself {
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
   .shortProfile__cont {
     font-size: 1.6rem;
 
@@ -286,7 +327,36 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
+
+  .keyword__title {
+    font-size: 2.5rem;
+  }
+
+  .keyword__desc {
+    font-size: 1.7rem;
+  }
 }
 
 @media all and (min-width: 992px) {
+  .about {
+    display: grid;
+    grid-template-columns: auto 40rem;
+    gap: 2rem;
+
+    &_myself {
+      padding: 2.5rem;
+      border-top: 0;
+      border-left: 3px solid map.get($colors, "primary");
+
+      p {
+        + p {
+          margin-top: .7rem;
+        }
+      }
+    }
+
+    &_keyword {
+      padding: 2.5rem;
+    }
+  }
 }
