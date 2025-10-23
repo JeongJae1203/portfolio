@@ -1,5 +1,5 @@
-import Box from '../components/common/Box'
-import AboutStyle from '../components/about/About.module.scss'
+import Box from '../common/Box'
+import AboutStyle from './About.module.scss'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 

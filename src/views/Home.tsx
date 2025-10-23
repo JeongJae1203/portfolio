@@ -3,7 +3,7 @@ import Modal from '../components/common/modal/Modal';
 import Intro from '../components/intro/Intro';
 import Project from '../components/project/Project';
 import Sincerely from '../components/sincerely/Sincerely';
-import Career from './Career';
+import Career from '../components/about/Career';
 import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 import { useOpenModal } from '../stores/useModalStroe';
 
