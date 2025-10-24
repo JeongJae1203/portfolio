@@ -45,7 +45,7 @@ export const techData = [
   {
     id: "tech-node",
     name: "🟢 Node.js",
-    description: "비동기 이벤트 기반의 서버 환경을 구축할 수 있습니다. Express.js와 함께 RESTful API 서버를 구성하며, 프론트엔드와의 통신 구조를 고려한 효율적인 백엔드 로직을 구현합니다."
+    description: "<strong>Node.js + Express.js 기반</strong>의 서버 환경에서 <strong>MySQL을 연동하여 기본적인 CRUD 기능</strong>과 사용자 인증 로직을 구현할 수 있습니다. <strong>bcryptjs</strong>를 이용한 비밀번호 암호화와 <strong>jwt 기반 토큰 인증</strong>을 통해 <strong>회원가입 및 로그인 기능을 구성한 경험</strong>이 있습니다. 주로 프론트엔드와의 연동을 고려한 RESTful API를 설계하며, 필요한 서버 구조를 직접 구축해 데이터 흐름을 이해하고 제어합니다."
   },
 ]
 
