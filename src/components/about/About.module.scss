@@ -379,6 +379,20 @@
   .cont {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+
+    .title__wrap {
+      .department {
+        font-size: 1.6rem;
+      }
+    }
+
+    .charge__list {
+      > li {
+        span {
+          font-size: 1.6rem;
+        }
+      }
+    }
   }
 
   .keyword__title {
