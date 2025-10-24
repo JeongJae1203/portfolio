@@ -22,3 +22,16 @@ export type ProjectProps = {
   url?: string,
   github?: string
 }
+
+/**
+ * TechProps
+ * 
+ * @description Tech 관련 Props Type 정의
+ */
+export type TechProps = {
+  tech?: {
+    id?: string,
+    name?: string,
+    description?: string
+  }
+}

@@ -23,6 +23,7 @@
   }
 }
 
+// 소개
 .about {
   position: relative;
 
@@ -39,6 +40,13 @@
       white-space: pre-line;
       word-break: keep-all;
       line-height: 1.5625;
+
+      strong {
+        font: {
+          size: 2rem;
+          weight: 600;
+        }
+      }
     }
   }
 
@@ -47,12 +55,52 @@
   }
 }
 
+// 기술 스펙
+.tech {
+  padding: 10rem 0 0;
 
+  &_area_list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-content: baseline;
+    gap: 1rem;
+    padding: 2rem;
+  }
 
+  &_area_spec {
+    margin-top: 2rem;
 
+    ul {
+      > li {
+        + li {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
 
+  &_spec_content {
+    padding: 2rem;
 
+    p {
+      white-space: pre-line;
+      font: {
+        size: 1.4rem;
+        weight: 300;
+      }
+      word-break: keep-all;
+      line-height: 1.5625;
 
+      strong {
+        font: {
+          size: 2rem;
+          weight: 600;
+        }
+        letter-spacing: -.05rem;
+      }
+    }
+  }
+}
 
 
 
@@ -283,6 +331,7 @@
 }
 
 
+/** Media Query */
 @media all and (min-width: 768px) {
   .sub__title {
     margin-bottom: 3.5rem;
@@ -293,6 +342,10 @@
     &_myself {
       p {
         font-size: 1.6rem;
+
+        strong {
+          font-size: 2.2rem;
+        }
       }
     }
   }
@@ -334,6 +387,31 @@
 
   .keyword__desc {
     font-size: 1.7rem;
+  }
+
+  // 기술 및 도구
+  .tech {
+    &_area {
+      display: flex;
+      gap: 2rem;
+
+      &_list {
+        flex: 1 0 55rem;
+        gap: 1.5rem;
+      }
+    }
+
+    &_spec_content {
+      padding: 2rem 4.5rem;
+
+      p {
+        font-size: 1.6rem;
+
+        strong {
+          font-size: 2.4rem;
+        }
+      }
+    }
   }
 }
 

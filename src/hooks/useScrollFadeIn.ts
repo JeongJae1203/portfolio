@@ -19,7 +19,7 @@ export const useScrollFadeIn = (rootMargin = '0px') => {
 
     if (current) {
       observer = new IntersectionObserver(handleScroll, { 
-        threshold: 0.2, // threshold를 낮춰서 테스트
+        threshold: 0.5, // threshold를 낮춰서 테스트
         rootMargin: rootMargin,
       });
 

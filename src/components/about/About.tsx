@@ -2,23 +2,24 @@ import { useTranslation } from 'react-i18next';
 import MainTitle from '../common/MainTitle'
 import styled from 'styled-components';
 import AboutStyle from './About.module.scss';
-import CssImg from '../../assets/images/skill/CSS.svg';
-import ScssImg from '../../assets/images/skill/Sass.svg';
-import HTMLImg from '../../assets/images/skill/HTML.svg';
-import JSImg from '../../assets/images/skill/JavaScript.svg';
-import VueImg from '../../assets/images/skill/Vue.svg';
-import ReactImg from '../../assets/images/skill/React.svg';
-import NodeImg from '../../assets/images/skill/NodeJS-Light.svg';
-import MySQLImg from '../../assets/images/skill/MySQL-Light.svg';
-import VSCodeImg from '../../assets/images/skill/VSCode.svg';
-import IdeaImg from '../../assets/images/skill/Idea-Dark.svg';
-import GithubImg from '../../assets/images/skill/Github-Light.svg';
-import VercelImg from '../../assets/images/skill/Vercel-Light.svg';
-import ViteImg from '../../assets/images/skill/Vite-Light.svg';
-
 
 const About = () => {
   const { t } = useTranslation();
+
+  const shortProfileArray = [
+    t('shortProfile1'),
+    t('shortProfile2'),
+    t('shortProfile3'),
+    t('shortProfile4'),
+    t('shortProfile5'),
+  ];
+
+  const shortProfileArrayWithStrong = shortProfileArray.map(profile => {
+    if (profile.includes('<strong>')) {
+      return profile.replace('<strong>', '<strong>').replace('</strong>', '</strong>');
+    }
+    return profile;
+  });
 
   return (
     <>
@@ -28,11 +29,9 @@ const About = () => {
           <MainTitle title={ t('about') } />
           <div className={ AboutStyle.about }>
             <div className={ AboutStyle.about_myself }>
-              <p>{ t('shortProfile1') }</p>
-              <p>{ t('shortProfile2') }</p>
-              <p>{ t('shortProfile3') }</p>
-              <p>{ t('shortProfile4') }</p>
-              <p>{ t('shortProfile5') }</p>
+              { shortProfileArrayWithStrong.map((profile, index) => (
+                <p key={ index } dangerouslySetInnerHTML={{ __html: profile }} />
+              )) }
             </div>
             <div className={ AboutStyle.about_keyword }>
               <div className={ AboutStyle.keyword__cont }>
@@ -47,77 +46,6 @@ const About = () => {
               </div>
             </div>
           </div>
-          {/* 스킬 */}
-          <CommonSection>
-            <h4 className={ AboutStyle.sub__title }>{ t('skill') }</h4>
-            <div className={ AboutStyle.skill }>
-              <div className={ AboutStyle.skill__list }>
-                <div className={ AboutStyle.skill__item }>
-                  <img src={ CssImg } alt="CSS" />
-                  <span>CSS</span>
-                </div>
-                <div className={ AboutStyle.skill__item }>
-                  <img src={ ScssImg } alt="SCSS" />
-                  <span>SCSS</span>
-                </div>
-                <div className={ AboutStyle.skill__item }>
-                  <img src={ HTMLImg } alt="HTML" />
-                  <span>HTML</span>
-                </div>
-                <div className={ AboutStyle.skill__item }>
-                  <img src={ JSImg } alt="JavaScript" />
-                  <span>JavaScript</span>
-                </div>
-                <div className={ AboutStyle.skill__item }>
-                  <img src={ VueImg } alt="Vue.js" />
-                  <span>Vue.js</span>
-                </div>
-                <div className={ AboutStyle.skill__item }>
-                  <img src={ ReactImg } alt="React.js" />
-                  <span>React.js</span>
-                </div>
-                <div className={ AboutStyle.skill__item }>
-                  <img src={ NodeImg } alt="Node.js" />
-                  <span>Node.js</span>
-                </div>
-                <div className={ AboutStyle.skill__item }>
-                  <img src={ MySQLImg } alt="MySQL" />
-                  <span>MySQL</span>
-                </div>
-                <div className={ AboutStyle.skill__item }>
-                  <img src={ VSCodeImg } alt="VSCode" />
-                  <span>VSCode</span>
-                </div>
-                <div className={ AboutStyle.skill__item }>
-                  <img src={ IdeaImg } alt="IntelliJ IDEA" />
-                  <span>IntelliJ IDEA</span>
-                </div>
-                <div className={ AboutStyle.skill__item }>
-                  <img src={ GithubImg } alt="GitHub" />
-                  <span>GitHub</span>
-                </div>
-                <div className={ AboutStyle.skill__item }>
-                  <img src={ VercelImg } alt="Vercel" />
-                  <span>Vercel</span>
-                </div>
-                <div className={ AboutStyle.skill__item }>
-                  <img src={ ViteImg } alt="Vite" />
-                  <span>Vite</span>
-                </div>
-              </div>
-              <div className={ AboutStyle.skill__spec }>
-                <div className={ AboutStyle.skill__spec__item }>
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                  <span>Vue.js</span>
-                  <span>React.js</span>
-                  <span>Node.js</span>
-                  <span>MySQL</span>
-                </div>
-              </div>
-            </div>
-          </CommonSection>
         </div>
       </AboutSection>
     </>
@@ -127,10 +55,6 @@ const About = () => {
 
 const AboutSection = styled.section`
   padding: 20rem 0 0;
-`;
-
-const CommonSection = styled.section`
-  padding: 10rem 0 0;
 `;
 
 export default About
