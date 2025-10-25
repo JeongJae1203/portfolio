@@ -1,4 +1,4 @@
-import { RiCloseLine, RiCodeSSlashLine, RiExternalLinkLine, RiGithubFill, RiStackOverflowLine } from '@remixicon/react';
+import { RiCloseLine, RiExternalLinkLine, RiGithubFill } from '@remixicon/react';
 import type { ProjectProps } from '../../../types/type';
 import ModalStyle from './Modal.module.scss';
 import { useCallback } from 'react';
@@ -48,18 +48,32 @@ const Modal = ({ projectData, closeModal }: ModalProps) => {
             {/* 개발 기간 */}
             <div className={ ModalStyle.modal__body__duration }>
               <div className={ ModalStyle.modal__inner }>
-                <h3 className={ ModalStyle.modal__title }><RiCodeSSlashLine /> 개발 기간</h3>
+                <h3 className={ ModalStyle.modal__title }>✅ 개발 기간</h3>
                 <p className={ ModalStyle.modal__body__text }>{ projectData?.duration }</p>
               </div>
             </div>
             {/* 기술 스택 */}
             <div className={ ModalStyle.modal__body__stack }>
               <div className={ ModalStyle.modal__inner }>
-                <h3 className={ ModalStyle.modal__title }><RiStackOverflowLine /> 기술 스택</h3>
+                <h3 className={ ModalStyle.modal__title }>🛠 기술 스택</h3>
                 <ul className={ ModalStyle.modal__body__list }>
                   { projectData?.keyword?.map((keyword, index) => (
                     <li key={ index }><span>{ keyword }</span></li>
                   )) }
+                </ul>
+              </div>
+            </div>
+            <div className={ ModalStyle.modal__body__features }>
+              <div className={ ModalStyle.modal__inner }>
+                <h3 className={ ModalStyle.modal__title }>🧩 주요 기능</h3>
+                <ul className={ ModalStyle.modal__body__cmm_list }>
+                  {
+                    projectData?.features?.map(feature => (
+                      <li key={ feature }>
+                        <span>{ feature }</span>
+                      </li>
+                    ))
+                  }
                 </ul>
               </div>
             </div>

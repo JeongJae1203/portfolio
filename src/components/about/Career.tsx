@@ -52,8 +52,8 @@ const Career = () => {
               </div>
               <ul className={ AboutStyle.charge__list }>
                 <li><span>Javascript, Vue.js, React.js, MySQL 학습</span></li>
-                <li><span>스터디에 참여하여 개발 공부 진행 및 동기생들과 원활한 소통과 커뮤니케이션</span></li>
-                <li><span>팀 프로젝트 1회 진행</span></li>
+                <li><span>스터디를 주최하여 개발 공부 진행 및 동기생들과 원활한 소통과 커뮤니케이션</span></li>
+                <li><span>팀 프로젝트 1회 진행 (대전세잔직업전문학교 리뉴얼)</span></li>
                 <li><span>HTML, CSS, Javascript, JQuery 학습</span></li>
               </ul>
             </Box>
@@ -65,7 +65,7 @@ const Career = () => {
               </div>
               <ul className={ AboutStyle.charge__list }>
                 <li><span>Spring, JPA, Oracle DB 학습</span></li>
-                <li><span>팀 프로젝트 1회 진행</span></li>
+                <li><span>팀 프로젝트 1회 진행 (도서 관리 시스템)</span></li>
               </ul>
             </Box>
           </div>

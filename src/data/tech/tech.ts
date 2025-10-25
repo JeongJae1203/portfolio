@@ -29,8 +29,8 @@ export const techData = [
   },
   {
     id: "tech-vue",
-    name: "🟩 Vue.js",
-    description: "<strong>Composition API / Pinia</strong>를 기반으로 구조화된 Vue 애플리케이션을 구축할 수 있습니다. \n 컴포넌트 간 데이터 흐름을 명확하게 관리하고, 라우터, 폼, 비동기 API 연동 등 다양한 기능을 통합적으로 설계합니다."
+    name: "🟢 Vue.js",
+    description: "Vue.js의 컴포넌트 구조와 반응형 데이터 흐름을 이해하고 있으며, Router를 활용한 페이지 전환과 Form 처리, API 연동을 통해 데이터를 표출하고 가공한 경험이 있습니다. \n Pinia를 간단한 Store 형태로 적용해 전역 상태를 관리해 본 경험이 있으며, 컴포넌트 간 데이터 전달과 상태 흐름을 고려한 구조 설계에 익숙합니다. \n Vue 기반의 SPA를 구성하며, 효율적인 데이터 렌더링과 유지보수를 중심으로 개발합니다."
   },
   {
     id: "tech-react",
@@ -47,6 +47,11 @@ export const techData = [
     name: "🟢 Node.js",
     description: "<strong>Node.js + Express.js 기반</strong>의 서버 환경에서 <strong>MySQL을 연동하여 기본적인 CRUD 기능</strong>과 사용자 인증 로직을 구현할 수 있습니다. <strong>bcryptjs</strong>를 이용한 비밀번호 암호화와 <strong>jwt 기반 토큰 인증</strong>을 통해 <strong>회원가입 및 로그인 기능을 구성한 경험</strong>이 있습니다. 주로 프론트엔드와의 연동을 고려한 RESTful API를 설계하며, 필요한 서버 구조를 직접 구축해 데이터 흐름을 이해하고 제어합니다."
   },
+  {
+    id: "tect-deploy",
+    name: "🚀 Deploy & Collaboration",
+    description: "Vercel을 활용해 프론트엔드 프로젝트를 단순 배포한 경험이 있습니다. \n Git과 SVN을 통해 코드 버전을 관리하고, GitHub를 통해 프로젝트 이력을 유지할 수 있습니다. \n 기본적인 브랜치 전략과 커밋 단위 관리에 익숙하며, 협업 과정에서 형상 관리의 중요성을 이해하고 실무적으로 적용할 수 있습니다."
+  }
 ]
 
 /**
