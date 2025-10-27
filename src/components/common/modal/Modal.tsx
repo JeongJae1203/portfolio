@@ -96,9 +96,19 @@ const Modal = ({ projectData, closeModal }: ModalProps) => {
                 <ul className={ ModalStyle.modal__body__cmm_list }>
                   {
                     projectData?.features?.map(feature => (
-                      <li key={ feature }>
-                        <span>{ feature }</span>
-                      </li>
+                      <li key={ feature }><span>{ feature }</span></li>
+                    ))
+                  }
+                </ul>
+              </div>
+            </div>
+            <div className={ ModalStyle.modal__body__implementation }>
+              <div className={ ModalStyle.modal__inner }>
+                <h3 className={ ModalStyle.modal__title }>⚙️ 구현 기능</h3>
+                <ul className={ ModalStyle.modal__body__cmm_list }>
+                  {
+                    projectData?.implementation?.map((implementation, index) => (
+                      <li key={ index }><span>{ implementation }</span></li>
                     ))
                   }
                 </ul>

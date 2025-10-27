@@ -12,10 +12,11 @@ export const pjrtData = [
     type : 'team',
     keyword : ['HTML5', 'SCSS', 'JavaScript', 'JQuery', 'Parcel', 'Vercel', 'GSAP'],
     thumbnail: cezanneThumbnail,
-    description : '교육기간 내 팀 프로젝트 주제로 선정된 대전세잔직업전문학교 리뉴얼 프로젝트입니다.',
+    description : '교육기간 내 팀 프로젝트 주제로 선정된 대전세잔직업전문학교 리뉴얼 프로젝트입니다. HTML과 CSS를 사용하여 반응형 웹 사이트를 구현하였습니다.',
     features : [
       '반응형 UI', 
       'Swiper.js를 사용한 메인 및 기타 이미지 슬라이드 구현',
+      'GSAP를 통한 애니메이션 구현',
       'Vercel을 통한 배포 환경 구성'
     ],
     techStack : {
@@ -23,7 +24,9 @@ export const pjrtData = [
       backend : [],
       tools: ['Parcel Bundler', 'Github', 'Vercel']
     },
-    implementation: [],
+    implementation: [
+      'GSAP를 통한 애니메이션 구현',
+    ],
     deployment: [
       'Vercel을 통해 배포 자동화',
       'Github를 통한 버전 관리 및 커밋 히스토리 관리'
@@ -42,6 +45,7 @@ export const pjrtData = [
     features : [
       '반응형 UI',
       'i18next를 통한 다국어 지원',
+      'Intersection Observer를 통한 스크롤 페이드 인 애니메이션 구현',
       'Vercel을 통한 배포 환경 구성'
     ],
     techStack : {
@@ -51,6 +55,7 @@ export const pjrtData = [
     },
     implementation: [
       '컴포넌트 단위 설계 및 Props 타입 정의',
+      'Intersection Observer를 통한 스크롤 페이드 인 애니메이션 구현',
       "Styled Components로 UI 스타일링 일원화",
       'i18next를 통한 다국어 지원 구현'
     ],
