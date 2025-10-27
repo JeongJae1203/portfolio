@@ -19,6 +19,12 @@ export type ProjectProps = {
   thumbnail?: string,
   features?: Array<string>,
   implementation?: Array<string>,
+  deployment?: Array<string>,
+  techStack?: {
+    frontend?: Array<string>,
+    backend?: Array<string>,
+    tools?: Array<string>
+  },
   duration?: string,
   url?: string,
   github?: string

@@ -56,11 +56,38 @@ const Modal = ({ projectData, closeModal }: ModalProps) => {
             <div className={ ModalStyle.modal__body__stack }>
               <div className={ ModalStyle.modal__inner }>
                 <h3 className={ ModalStyle.modal__title }>🛠 기술 스택</h3>
-                <ul className={ ModalStyle.modal__body__list }>
-                  { projectData?.keyword?.map((keyword, index) => (
-                    <li key={ index }><span>{ keyword }</span></li>
-                  )) }
-                </ul>
+                <div className={ ModalStyle.modal__body__stack__inner }>
+                  <div className={ ModalStyle.modal__body__stack__item }>
+                    <strong>✏️ Frontend</strong>
+                    <ul className={ ModalStyle.modal__body__stack__list }>
+                      {
+                        projectData?.techStack?.frontend?.map((frontend, index) => (
+                          <li key={ index }><span>{ frontend }</span></li>
+                        ))
+                      }
+                    </ul>
+                  </div>
+                  <div className={ ModalStyle.modal__body__stack__item }>
+                    <strong>✏️ Backend</strong>
+                    <ul className={ ModalStyle.modal__body__stack__list }>
+                      {
+                        projectData?.techStack?.backend?.map((backend, index) => (
+                          <li key={ index }><span>{ backend }</span></li>
+                        ))
+                      }
+                    </ul>
+                  </div>
+                  <div className={ ModalStyle.modal__body__stack__item }>
+                    <strong>✏️ Tools</strong>
+                    <ul className={ ModalStyle.modal__body__stack__list }>
+                      {
+                        projectData?.techStack?.tools?.map((tools, index) => (
+                          <li key={ index }><span>{ tools }</span></li>
+                        ))
+                      }
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div className={ ModalStyle.modal__body__features }>
@@ -72,6 +99,18 @@ const Modal = ({ projectData, closeModal }: ModalProps) => {
                       <li key={ feature }>
                         <span>{ feature }</span>
                       </li>
+                    ))
+                  }
+                </ul>
+              </div>
+            </div>
+            <div className={ ModalStyle.modal__body__deployment }>
+              <div className={ ModalStyle.modal__inner }>
+                <h3 className={ ModalStyle.modal__title }>🚀 배포 환경</h3>
+                <ul className={ ModalStyle.modal__body__cmm_list }>
+                  {
+                    projectData?.deployment?.map((deployment, index) => (
+                      <li key={ index }><span>{ deployment }</span></li>
                     ))
                   }
                 </ul>
