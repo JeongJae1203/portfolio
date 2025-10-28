@@ -18,7 +18,7 @@ const SincerelySection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 50vh;
   padding: 20rem 0 0;
 `;
 

@@ -13,7 +13,6 @@ const Home = () => {
   const careerFadeIn = useScrollFadeIn();
   const projectFadeIn = useScrollFadeIn();
   const techFadeIn = useScrollFadeIn();
-  const sincerelyFadeIn = useScrollFadeIn();
 
   const { isOpen, projectData, closeModal } = useOpenModal();
 
@@ -39,7 +38,7 @@ const Home = () => {
       <div id="projects" ref={projectFadeIn.ref} className="fade__area">
         <Project />
       </div>
-      <div id="contact" ref={sincerelyFadeIn.ref} className="fade__area">
+      <div id="contact">
         <Sincerely />
       </div>
     </>
