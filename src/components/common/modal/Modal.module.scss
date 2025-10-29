@@ -40,6 +40,7 @@ $content-mx-width: 70rem;
   &__inner {
     max-width: 100rem;
     margin: 5rem auto;
+    padding: 0 1.5rem;
   }
 }
 
@@ -204,6 +205,10 @@ $content-mx-width: 70rem;
 
     &__keyword_wrap {
       justify-content: center;
+    }
+
+    &__inner {
+      padding: 0;
     }
 
     &__util {

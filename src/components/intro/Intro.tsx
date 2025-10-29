@@ -49,7 +49,7 @@ const Intro = () => {
           </div>
         </div>
         <div className={ IntroStyle.btn__container }>
-          <a href="/file/resume.hwp" download={true} className={ IntroStyle.btn__download }>
+          <a href="/file/이정재_이력서.hwp" download={true} className={ IntroStyle.btn__download }>
             <span>{t('download')}</span>
             <RiDownloadLine />
           </a>
