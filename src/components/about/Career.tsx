@@ -48,7 +48,7 @@ const Career = () => {
                 <span className={ AboutStyle.date }>2025.04 - 2025.10 / 2020.04 - 2020.10</span>
                 <h4 className={ AboutStyle.company }>대전세잔직업전문학교</h4>
                 <p className={ AboutStyle.department }># 프론트엔드 개발자 과정 수료</p>
-                <p className={ AboutStyle.department }># 웹 디자인 & 퍼블리서 과정 수료</p>
+                <p className={ AboutStyle.department }># 웹 디자인 & 퍼블리셔 과정 수료</p>
               </div>
               <ul className={ AboutStyle.charge__list }>
                 <li><span>Javascript, Vue.js, React.js, MySQL 학습</span></li>

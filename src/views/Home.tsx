@@ -5,15 +5,9 @@ import Project from '../components/project/Project';
 import Sincerely from '../components/sincerely/Sincerely';
 import Career from '../components/about/Career';
 import Tech from '../components/about/Tech';
-import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
 import { useOpenModal } from '../stores/useModalStroe';
 
 const Home = () => {
-  const aboutFadeIn = useScrollFadeIn();
-  const careerFadeIn = useScrollFadeIn();
-  const projectFadeIn = useScrollFadeIn();
-  const techFadeIn = useScrollFadeIn();
-
   const { isOpen, projectData, closeModal } = useOpenModal();
 
   return (
@@ -26,16 +20,16 @@ const Home = () => {
         /> 
       }
       <Intro />
-      <div id="about" ref={aboutFadeIn.ref} className="fade__area">
+      <div id="about">
         <About />
       </div>
-      <div id="career" ref={careerFadeIn.ref} className="fade__area">
+      <div id="career">
         <Career />
       </div>
-      <div id="tech" ref={techFadeIn.ref} className="fade__area">
+      <div id="tech">
         <Tech />
       </div>
-      <div id="projects" ref={projectFadeIn.ref} className="fade__area">
+      <div id="projects">
         <Project />
       </div>
       <div id="contact">
