@@ -39,7 +39,6 @@ const Project = () => {
 
 const ProjectSection = styled.section`
   min-height: 100vh;
-  margin: 20rem 0 0;
 `;
 
 const ProjectInner = styled.article`
