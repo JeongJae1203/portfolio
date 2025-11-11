@@ -35,7 +35,7 @@ export const techData = [
   {
     id: "tech-react",
     name: "⚛️ React.js",
-    description: "시맨틱 마크업과 모듈화된 구조를 기반으로 유지보수성이 높은 UI를 구현할 수 있습니다. \n <strong>Router</strong>를 활용해 페이지 간 전환 구조를 설계하고, <strong>Styled Components</strong>로 컴포넌트 단위 스타일링을 적용할 수 있습니다. <strong>Zustand</strong>를 통한 전역 상태 관리, <strong>React-Query</strong>를 활용한 데이터 페칭 및 캐싱, 그리고 상황에 맞는 Custom Hook을 직접 정의하여 재사용 가능한 로직을 구성합니다."
+    description: "시맨틱 마크업과 모듈화된 구조를 기반으로 유지보수성이 높은 UI를 구현할 수 있습니다. \n <strong>Router</strong>를 활용해 페이지 간 전환 구조를 설계하고, <strong>Styled Components</strong>로 컴포넌트 단위 스타일링을 적용할 수 있습니다."
   },
   {
     id: "tech-typescript",
